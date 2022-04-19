@@ -42,6 +42,38 @@ return [
     */
 
     'debug' => (bool) env('APP_DEBUG', false),
+    'debug_blacklist' => [
+        '_ENV' => [
+            'APP_KEY',
+            'DB_DATABASE',
+            'DB_USERNAME',
+            'DB_PASSWORD',
+            'MAIL_HOST',
+            'MAIL_PORT',
+            'MAIL_USERNAME',
+            'MAIL_PASSWORD',
+            'MAIL_ENCRYPTION',
+            'SESSION_LIFETIME',
+        ],
+
+        '_SERVER' => [
+            'APP_KEY',
+            'DB_DATABASE',
+            'DB_USERNAME',
+            'DB_PASSWORD',
+            'MAIL_HOST',
+            'MAIL_PORT',
+            'MAIL_USERNAME',
+            'MAIL_PASSWORD',
+            'MAIL_ENCRYPTION',
+            'SESSION_LIFETIME',
+        ],
+
+        '_POST' => [
+            'password',
+        ],
+    ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -71,6 +103,8 @@ return [
 
     'timezone' => 'UTC',
 
+    'timezone' => env('APP_TIMEZONE', 'Europe/Madrid'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -82,7 +116,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
