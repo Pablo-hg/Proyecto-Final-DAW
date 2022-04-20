@@ -1,1 +1,6 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+.logo a img{
+    width: 35px;
+}
+
+.dropdown:hover .dropdown-menu {display: block;}
+
