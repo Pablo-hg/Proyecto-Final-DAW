@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,11 @@ Route::get('roadmap', [AppController::class, 'roadmap'])->name('roadmap');
 Route::get('contact', [AppController::class, 'contact'])->name('contact');
 
 //Back-end
-Route::get('admin', [AppController::class, 'index'])->name('admin');
+Route::get('admin', [AdminController::class, 'index'])->name('admin');
+
+//Auth
+Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');
+
+//Back-end Home
+Route::get('admin/home', [AdminController::class, 'index'])->name('admin');
+

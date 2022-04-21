@@ -20,60 +20,57 @@
 
     </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <div class="logo">
-            <a class="navbar-brand" href="#">
-                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'imagenlogo']) }}                Pablo_hg
-            </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{ route('projects') }}" id="navbarDropdown">
-                        Projects
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Webs</a></li>
-                        <li><a class="dropdown-item" href="#">Games</a></li>
-                        <li><a class="dropdown-item" href="#">Apps</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('roadmap') }}">Roadmap</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
-                </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'imagenlogo']) }}                Pablo_hg
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ route('projects') }}" id="navbarDropdown">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Webs</a></li>
+                            <li><a class="dropdown-item" href="#">Games</a></li>
+                            <li><a class="dropdown-item" href="#">Apps</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('roadmap') }}">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <main>
         <header>
             <h1>Mi primer CMS</h1>
             <h2>con Laravel</h2>
         </header>
-
         <section class="container-fluid">
-
-            <!--Content-->
+        <!--Content-->
         @yield('content')
-
-        <!--Footer-->
         </section>
     </main>
 
     <footer>
-    © <?php echo date("Y") ?>
-    <a></a>
+        <div class="container-fluid">
+            Copyright © <?php echo date("Y") ?> pablohg.com • Full Stack, FrontEnd and BackEnd developer
+        </div>
     </footer>
 </body>
     <!-- JavaScript -->
