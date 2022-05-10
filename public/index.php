@@ -33,6 +33,11 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 
 require __DIR__.'/../vendor/autoload.php';
 
+session_start();
+
+$_SESSION['public'] = 'http://35.181.8.108/proyecto-final-daw/public/';
+$_SESSION['home'] = $_SESSION['public'].'index.php/';
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -53,3 +58,5 @@ $response = $kernel->handle(
 )->send();
 
 $kernel->terminate($request, $response);
+
+

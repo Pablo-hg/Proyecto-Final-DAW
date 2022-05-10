@@ -23,6 +23,7 @@ class CreateProjectosTable extends Migration
             $table->string('titulo', 64)->nullable(false)->default("");
             $table->string('slug', 128)->nullable();
             $table->string('entradilla', 128)->nullable();
+            $table->string('logo', 64)->nullable();
             $table->string('imagen1', 64)->nullable();
             $table->string('imagen2', 64)->nullable();
             $table->string('imagen3', 64)->nullable();

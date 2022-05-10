@@ -1,6 +1,312 @@
-.logo a img{
-    width: 35px;
+/*FUENTE*/
+body,main,nav{
+    font-family: inherit;
+}
+.contenedornav{
+    width: 100%;
+}
+/*LOGO*/
+.logo a img {
+    width: 2.18rem;
+}
+/*BOTON CONTACTO*/
+a.bt-contact,a.bt-contact2{
+    border-radius: 0.938rem;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    transition: all 0.5s ease;
+}
+a.bt-contact:hover{
+    background: white;
+    color: #6cbbfe;
+}
+a.bt-contact2:hover{
+    background: white;
+    color: #6cbbfe;
+}
+/*BOTON CONTACTO*/
+
+
+/*MENU*/
+nav{
+    background: linear-gradient(#6DBCFF,#5EAAEB);
+    height: 6.625rem;
 }
 
-.dropdown:hover .dropdown-menu {display: block;}
+li a.activo{
+    color: #1D67A6;
+}
+li a.activo:hover{
+    color: #1D67A6;
+}
+/*EFECTO DEL MENU*/
+.menu a{
+    position: relative;
+    color: white;
+}
+.menu a:hover{
+    color: white;
+}
+.menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: white;
+    transform: scaleX(0);
+    /*desde donde aparece la linea*/
+    transform-origin: center;
+    /*tiempo y efecto de la animacion*/
+    transition: transform 0.25s ease-in-out;
+}
+.menu a:hover::before {
+    transform: scaleX(1);
+}
+
+/*EFECTO DEL MENU*/
+
+/*SECTION DEL HEADER*/
+header section{
+    height: 31.438rem;
+    background:linear-gradient(#5EAAEB,#266AA4);
+}
+header .titulo  {
+    height: 15.625rem;
+}
+header .fullstack{
+    width: 40%;
+}
+header h1{
+    font-size: 50px;
+}
+header .posnav{
+    width: 1000px;
+}
+img.logogrande{
+    width: 12.5rem;
+    border-radius: 6.25rem;
+}
+img.svgbase,img.svgizq,img.svgdere{
+    left: 0;
+    width: 100%;
+}
+img.svgbase{
+    margin-top: 128px;
+    height: 8rem;
+}
+img.svgizq{
+    margin-top: -23px;
+}
+img.svgdere{
+    margin-top: -5px;
+}
+
+
+/*MAIN***********************/
+section.main{
+    padding-bottom: 12rem;
+    background-color: #ffffff;
+    background-attachment: fixed;
+}
+/*1ºPARTE HOME*/
+
+/*BOTON LEArn*/
+a.bt-learn{
+    background-color: #66B3F6;
+    text-decoration: none;
+    border-radius: 1.563rem;
+    transition: all 0.5s ease;
+    color: white;
+}
+a.bt-learn:hover{
+    background: white;
+    color: #6cbbfe;
+    border: 1px Solid #6cbbfe;
+}
+/*BOTON LEANR*/
+/*1ºPARTE HOME*/
+
+/*2ºPARTE HOME*/
+.container2{
+    padding-bottom: 45rem;
+}
+.presentacion{
+    background: #1D67A6;
+}
+.descripcion{
+    padding-bottom: 170px;
+}
+.container2 .tabla{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 15.5rem;
+}
+.front{
+    padding-bottom: 1.89rem;
+    border-top-left-radius: 1.563rem!important;
+    border-bottom-left-radius: 1.563rem!important;
+
+}
+.extras{
+    padding-bottom: 9.39rem;
+    border-top-right-radius: 1.563rem!important;
+    border-bottom-right-radius: 1.563rem!important;
+}
+svg.logoback{
+    margin-top: 0.89rem!important;
+    margin-bottom: 0.8rem!important;
+}
+.conocimientos{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-top: 0.5px Solid #8D8D8D;
+}
+.tools{
+    margin: 0 9rem;
+}
+.txtazul{
+    color: #2098FF;
+}
+/*2ºPARTE HOME*/
+
+/*3ºPARTE HOME*/
+/*CAJAS PROYECTOS*/
+.cajaprojecto{
+    border-radius: 25px;
+    border: 0.5px Solid #8D8D8D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.santa img,.crash img,.anime img{
+    width: 16.625rem;
+}
+.santa{
+    background: #EF773C;
+}
+.santa img{
+    margin-left: -15px;
+}
+.crash{
+    background: #003988;
+}
+.anime{
+    background: #ffaa00;
+}
+.overlay{
+    background: linear-gradient(#6DBCFF,#1D67A6) ;
+    height: 231px;
+    width: 330px;
+    opacity: 0;
+    transition: .45s ease-in-out;
+    margin-top: -230px;
+    margin-left: -14px;
+    border-radius: 25px;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.overlay p.texto    {
+    margin: 0 1.75rem;
+}
+/*CAJAS PROYECTOS*/
+/*BOTON VIEW*/
+a.bt-view{
+    text-decoration: none;
+    border-radius: 1.563rem;
+    transition: all 0.5s ease;
+    background: white;
+    color: #6cbbfe;
+    border: 1px Solid #6cbbfe;
+}
+a.bt-view:hover{
+    background:  #6cbbfe;
+    color: white;
+}
+/*BOTON VIEW*/
+figure.cajaprojecto img{
+    transform: scale(1);
+    transition: .25s ease-in-out;
+}
+/*BOTON VISIT*/
+a.bt-visit{
+    text-decoration: none;
+    border-radius: 1.563rem;
+    transition: all 0.5s ease;
+    color: white;
+    border: 2px Solid #6cbbfe;
+}
+a.bt-visit:hover{
+    background: #6cbbfe;
+    color: white;
+}
+/*BOTON VISIT*/
+/*3ºPARTE HOME*/
+
+/*BOX PREFOOTER*/
+footer .prefooter{
+    height: 10.313rem;
+    background-color: #1D67A6;
+    border-radius: 1.563rem;
+    bottom: 105%;
+    left: 3.5%;
+}
+
+/*FOOTER*/
+footer{
+    background-image: linear-gradient(0deg,#266AA4,#6DBCFF);
+    height: 39rem;
+    padding-top: 6.5rem;
+}
+
+/*REDES DEL FOOTER*/
+
+a.bt-redes{
+    text-decoration: none;
+    width: 4rem;
+    height: 4rem;
+    border: 1px Solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    transition: all 0.5s ease;
+    color: white;
+}
+a.bt-redes:hover{
+    background: white;
+    color: #438cc9;
+}
+/*REDES DEL FOOTER*/
+
+/*IMAGENES DEL FOOTER*/
+img.logolaravel{
+    width: 15.313rem;
+    height: 4rem;
+}
+img.logoboostrap{
+    width: 5.25rem;
+    height: 3rem;
+}
+/*IMAGENES DEL FOOTER*/
+
+
+
+@media (min-width: 992px){
+    nav:before{
+        content: "";
+        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgnav.svg);
+        background-size: cover;
+        height: 6.625rem;
+        width: 52.813rem;
+        left: 32.875rem;
+        position: absolute;
+    }
+
+}
+
+
+
+
+
+
+
 
