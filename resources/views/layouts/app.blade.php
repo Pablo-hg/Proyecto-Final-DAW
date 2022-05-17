@@ -14,7 +14,6 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <!-- Bootstrap JS -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </head>
     @php $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" @endphp
@@ -55,7 +54,7 @@
                     </div>
                     <!--CONTACTO-->
                     <div class="col-lg-3">
-                        <a href="#" class="bt-contact text-uppercase border border-white py-1 px-3">contact</a>
+                        <a href="{{ route('contact') }}" class="bt-contact text-uppercase border border-white py-1 px-3">contact</a>
                     </div>
                     <!--BOTON RESPONSIVE-->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,12 +66,11 @@
         <!--PRE-MAIN-->
         <section>
             <!--CAMBIAR DEPENDIENDO DE LA PESTAÑA-->
-            <!--HOME-->
             <div class="container">
                 <!--PRESENTACION-->
-                <div class="row align-items-center text-center justify-content-center pt-5 titulo">
+                <div class="row align-items-center justify-content-center pt-5 titulo">
                     @switch($link)
-                        @case($link==route('home'))
+                        @case($link==route('home')) <!--HOME-->
                             <div class="fullstack">
                                 <h1 class="fw-bold text-white">Hi, I’m Pablo FullStack Developer</h1>
                             </div>
@@ -81,12 +79,15 @@
                                 {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'logogrande']) }}
                             </div>
                             @break
-                        @case($link==route('portfolio'))
-                        <div class="fullstack">
-                            <h1 class="fw-bold text-white">portfolio</h1>
+                        @case($link==route('portfolio')) <!--PORTFOLIO-->
+                        <div class="fullstack text-white fw-bold text-center">
+                            <h1 class="fw-bold">FullStack developer portfolio</h1>
+                            <p class="fs-5">From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS.
+                                Check out my latest web software development portfolio projects.
+                            </p>
                         </div>
                             @break
-                        @case($link==route('roadmap'))
+                        @case($link==route('roadmap')) <!--ROADMAP-->
                         <div class="fullstack">
                             <h1 class="fw-bold text-white">roadmap</h1>
                         </div>
@@ -104,7 +105,7 @@
     </header>
     <!--MAIN-->
     <main>
-        <section class="main text-center">
+        <section class="main text-center" id="listado">
         <!--Content-->
         @yield('content')
         </section>
@@ -171,5 +172,8 @@
 </body>
     <!-- JavaScript -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <!-- Firebase -->
+    <!-- script para el filtrador -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
 </html>

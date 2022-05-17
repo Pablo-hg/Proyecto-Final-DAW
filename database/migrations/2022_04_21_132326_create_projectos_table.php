@@ -32,7 +32,12 @@ class CreateProjectosTable extends Migration
             $table->text('texto1')->nullable();
             $table->text('texto2')->nullable();
             $table->text('texto3')->nullable();
-            $table->text('técnicas')->nullable();
+            $table->text('alltecnicas')->nullable();
+            $table->string('técnica1', 32)->nullable();
+            $table->string('técnica2', 32)->nullable();
+            $table->string('técnica3', 32)->nullable();
+            $table->string('técnica4', 32)->nullable();
+            $table->string('técnica5', 32)->nullable();
             $table->string('enlace1', 128)->nullable();
             $table->string('enlace2', 128)->nullable();
             $table->string('enlace3', 128)->nullable();

@@ -5,130 +5,62 @@
     <!--1ºPARTE-->
     <div class="container">
         <!--CARUSEL-->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="red"></rect>
-                        <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-                    </svg>
+        <div class="col-md-12">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="250" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="red"></rect>
+                            <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
+º                        </svg>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="brown"></rect>
+                            <text x="50%" y="50%" fill="#555" dy=".3em">Second slide</text>
+                        </svg>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="blue"></rect>
+                            <text x="50%" y="50%" fill="#555" dy=".3em">Third slide</text>
+                        </svg>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="orange"></rect>
+                            <text x="50%" y="50%" fill="#555" dy=".3em">cuarto slide</text>
+                        </svg>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="pink"></rect>
+                            <text x="50%" y="50%" fill="#555" dy=".3em">quinto slide</text>
+                        </svg>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="yellow"></rect>
+                            <text x="50%" y="50%" fill="#555" dy=".3em">sexto slide</text>
+                        </svg>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="brown"></rect>
-                        <text x="50%" y="50%" fill="#555" dy=".3em">Second slide</text>
-                    </svg>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="blue"></rect>
-                        <text x="50%" y="50%" fill="#555" dy=".3em">Third slide</text>
-                    </svg>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        <!--
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="heading-section mb-5 pb-md-4">Carousel #02</h2>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="featured-carousel owl-carousel">
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/work-1.png);">
-                                        <a href="#" class="icon d-flex align-items-center justify-content-center">
-                                            <span class="ion-ios-search"></span>
-                                        </a>
-                                    </div>
-                                    <div class="text pt-3 w-100 text-center">
-                                        <h3><a href="#">I code the front-end and the tools that support it.</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/work-2.png);">
-                                        <a href="#" class="icon d-flex align-items-center justify-content-center">
-                                            <span class="ion-ios-search"></span>
-                                        </a>
-                                    </div>
-                                    <div class="text pt-3 w-100 text-center">
-                                        <h3><a href="#">Work 02</a></h3>
-                                        <span>Web Design</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/work-3.jpg);">
-                                        <a href="#" class="icon d-flex align-items-center justify-content-center">
-                                            <span class="ion-ios-search"></span>
-                                        </a>
-                                    </div>
-                                    <div class="text pt-3 w-100 text-center">
-                                        <h3><a href="#">Work 03</a></h3>
-                                        <span>Web Design</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/work-4.jpg);">
-                                        <a href="#" class="icon d-flex align-items-center justify-content-center">
-                                            <span class="ion-ios-search"></span>
-                                        </a>
-                                    </div>
-                                    <div class="text pt-3 w-100 text-center">
-                                        <h3><a href="#">Work 04</a></h3>
-                                        <span>Web Design</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/work-5.jpg);">
-                                        <a href="#" class="icon d-flex align-items-center justify-content-center">
-                                            <span class="ion-ios-search"></span>
-                                        </a>
-                                    </div>
-                                    <div class="text pt-3 w-100 text-center">
-                                        <h3><a href="#">Work 05</a></h3>
-                                        <span>Web Design</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/work-6.jpg);">
-                                        <a href="#" class="icon d-flex align-items-center justify-content-center">
-                                            <span class="ion-ios-search"></span>
-                                        </a>
-                                    </div>
-                                    <div class="text pt-3 w-100 text-center">
-                                        <h3><a href="#">Work 06</a></h3>
-                                        <span>Web Design</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <!--BOTON LEARN MORE-->
         <div class="row justify-content-center py-5">
             <div class="col-lg-2">
@@ -214,13 +146,13 @@
         <p class="fs-4 mb-5">Here are a few projects I’ve worked on recently</p>
         <div class="row justify-content-center">
             @foreach ($rowset as $row)
-                <figure onmouseenter="hola(this)" onmouseleave="adios(this)" class="col-lg-3 cajaprojecto mx-4 @switch($row->logo)
+                <figure onmouseenter="hoverproyecto(this)" onmouseleave="salirhoverproyecto(this)" class="col-lg-3 cajaprojecto mx-4 @switch($row->logo)
                     @case($row->logo=="logosanta.png")
                         santa @php $texto="Design and creation of an NTF’S website & a 2d platform minigame." @endphp @break
                     @case($row->logo=="logocrash.png")
                         crash @php $texto="Management of users and data of a videogame and creation of the web." @endphp @break
                     @case($row->logo=="logoanime.png")
-                        anime @php $texto="Creation of an online turn-based RPG card video game." @endphp @break
+                        anime @php $texto="Creation of an free online turn-based RPG card video game." @endphp @break
                 @endswitch">
                     {{ Html::image('img/home/'.$row->logo,'Logo Proyecto',['class'=>'imgproyecto'])}}
                     <figcaption>
