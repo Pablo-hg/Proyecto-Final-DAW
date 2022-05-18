@@ -3,7 +3,7 @@
 @section('content')
     @php $texto=""; @endphp
     <!--1ºPARTE-->
-    <div class="container">
+    <div class="container" onload="myFunction()">
         <!--CARUSEL-->
         <div class="col-md-12">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -200,5 +200,6 @@
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
 

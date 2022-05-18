@@ -250,7 +250,7 @@ a.bt-visit:hover{
 
 /*1ºPARTE PORTFOLIO*/
 .filtros{
-    margin-top: 7rem;
+    margin-top: 2.5rem;
 }
 a.filtro{
     border-radius: 25px;
@@ -261,48 +261,57 @@ a.filtro{
 }
 .filtro:hover{
     background: #1D67A6;
+    color: white;
+    margin-top: 10px;
 }
 .nombre-filtro{
     opacity: 0;
     color: white;
     font-size: 16px;
 }
-.filtro .filtro1{
-    opacity: 1;
-    color: #1D67A6;
-    margin-left: 10px;
-    margin-top: 2px;
+.filtro1{
+    padding-top: 12px;
 }
-.filtros .filtro2{
-    margin-left: -1px;
-    margin-top: 4px;
-}
-.filtros .filtro3{
+
+.filtro3{
     margin-left: 5px;
-    margin-top: 5px;
 }
-.filtros .filtro4{
+.filtro4{
     margin-left: 20px;
-    margin-top: 4px;
 }
-.filtros .filtro5{
+.filtro5{
     margin-left: 26px;
-    margin-top: 4px;
 }
-.filtros .filtro6{
-    margin-top: 4px;
+.filtro7{
+    margin-left: 24px;
 }
-.filtros .filtro7{
-    margin-left: 18px;
-    margin-top: 4px;
+.filtro8{
+    margin-left: 33px;
 }
-.filtros .filtro8{
-    margin-left: 18px;
-    margin-top: 4px;
+.filtro9{
+    margin-left: 27px;
 }
-.filtros .filtro9{
+.filtro10{
     margin-left: 16px;
-    margin-top: 4px;
+}
+.filtro11{
+    margin-left: 20px;
+}
+.filtros .filtro12{
+    margin-left: 10px;
+}
+.filtros .filtro14{
+    margin-left: 20px;
+}
+.filtros .filtro15{
+    margin-left: 20px;
+}
+.filtros .filtro16{
+    margin-left: 8px;
+}
+.filtros a.ct_item-active{
+    background: #1D67A6;
+    color: white;
 }
 /*1ºPARTE PORTFOLIO*/
 
@@ -372,8 +381,6 @@ a.filtro{
 
 .proyectos .card .contentBx{
     display: flex;
-    justify-content: center;
-    align-content: center;
     flex-direction: column;
 }
 .proyectos .card .contentBx .content{
@@ -396,7 +403,6 @@ a.filtro{
     transform: translateY(50px);
     transition-delay: 0.75s;
 }
-
 /*EFECTO DESAPARECION*/
 /*HOVER PROYECTOS*/
 .contentBx .row{
@@ -471,8 +477,6 @@ img.logoboostrap{
     }
 }
 
-
-
-
-
 /****************************************/
+
+
