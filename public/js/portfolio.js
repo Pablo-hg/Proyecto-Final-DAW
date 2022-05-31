@@ -1,7 +1,9 @@
 // EFECTO OPACIDAD FILTROS PORTFOLIO
-function hoverfiltro(x){
-    x.childNodes[3].style.opacity = 0;
-    x.childNodes[1].style.opacity = 1;
+function hoverfiltro(x) {
+    if (document.documentElement.scrollWidth > 580) {
+        x.childNodes[3].style.opacity = 0;
+        x.childNodes[1].style.opacity = 1;
+    }
 }
 function salirhoversalir(x){
     x.childNodes[3].style.opacity = 1;

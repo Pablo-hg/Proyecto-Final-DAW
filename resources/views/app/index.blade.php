@@ -3,83 +3,95 @@
 @section('content')
     @php $texto=""; @endphp
     <!--1ºPARTE-->
-    <div class="container" onload="myFunction()">
+    <div class="container">
         <!--CARUSEL-->
-        <div class="col-md-12">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="250" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="red"></rect>
-                            <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-º                        </svg>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="brown"></rect>
-                            <text x="50%" y="50%" fill="#555" dy=".3em">Second slide</text>
-                        </svg>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="blue"></rect>
-                            <text x="50%" y="50%" fill="#555" dy=".3em">Third slide</text>
-                        </svg>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="orange"></rect>
-                            <text x="50%" y="50%" fill="#555" dy=".3em">cuarto slide</text>
-                        </svg>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="pink"></rect>
-                            <text x="50%" y="50%" fill="#555" dy=".3em">quinto slide</text>
-                        </svg>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="yellow"></rect>
-                            <text x="50%" y="50%" fill="#555" dy=".3em">sexto slide</text>
-                        </svg>
+        <div class="row justify-content-center">
+            <!--BOTON IZQ-->
+            <div class="col-sm-1">
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!--CAJAS-->
+            <div class="col-sm-10">
+                <div class="swiper-container mySwiper overflow-hidden">
+                    <div class="swiper-wrapper pt-2">
+                        <div class="swiper-slide text-center">
+                            <div class="card-description mx-2 mb-2">
+                                {{ Html::image('img/home/carousel/android.png', 'Logo android',['class'=>'pb-1']) }}
+                                <div class="card-text mx-1 mt-2">
+                                    Develop and emulate the applications for the Android M.O.S.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide text-center">
+                            <div class="card-description mx-2 mb-2">
+                                {{ Html::image('img/home/carousel/figma.png', 'Logo figma',['class'=>'pb-1']) }}
+                                <div class="card-text mx-1 mt-2">
+                                    Design the views and the animations of websites and applications.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-center">
+                            <div class="card-description mx-2 mb-2">
+                                {{ Html::image('img/home/carousel/github.png', 'Logo github',['class'=>'pb-1']) }}
+                                <div class="card-text mx-1 mt-2">
+                                    Manage version control of files and code, and partially distribute work.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-center">
+                            <div class="card-description mx-2 mb-2">
+                                {{ Html::image('img/home/carousel/php.png', 'Logo php',['class'=>'pb-1']) }}
+                                <div class="card-text mx-1 mt-2">
+                                    Control, configure and create the back-end and manage the database.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-center">
+                            <div class="card-description mx-2 mb-2">
+                                {{ Html::image('img/home/carousel/unity.png', 'Logo unity',['class'=>'pb-1']) }}
+                                <div class="card-text mx-1 mt-2">
+                                    Create videogames for multiple platforms and devices using scripts.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-center">
+                            <div class="card-description mx-2 mb-2">
+                                {{ Html::image('img/home/carousel/vsc.png', 'Logo vsc',['class'=>'pb-1']) }}
+                                <div class="card-text mx-1 mt-2">
+                                    I code the front-end, the tools that support it and check the results.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            </div>
+            <!--BOTON DERE-->
+            <div class="col-sm-1">
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <!--BOTON LEARN MORE-->
         <div class="row justify-content-center py-5">
-            <div class="col-lg-2">
+            <div class="col-sm-5">
                 <a href="#" class="bt-learn fs-4 py-2 px-4">Learn more</a>
             </div>
         </div>
     </div>
     <!--2ºPARTE-->
     <div class="container2">
-        <div class="position-relative d-flex flex-column">
+        <div class="position-relative d-flex">
             <!--PRESENTACION-->
             <div class="container-fluid text-white presentacion ">
                 <!--SALUDO-->
-                <div class="row justify-content-center pt-4 pb-3 mt-5 ">
-                    <h2 class="fs-2">Hi, I’m Pablo. Nice to meet you.</h2>
+                <div class="row justify-content-center pb-3 mt-5 ">
+                    <div class="col-sm-12">
+                        <h2 class="fs-2">Hi, I’m Pablo. Nice to meet you.</h2>
+                    </div>
                 </div>
                 <!--DESCRIPCION-->
-                <div class="row justify-content-center descripcion mb-3">
-                    <div class="fs-5 col-lg-5">
+                <div class="row justify-content-center descripcion mb-4">
+                    <div class="fs-5 col-md-7">
                         I’m a junior Front-End and Back-End Developer located in Madrid.
                         I’ve always been someonewho is a serius passion for code and develop webs, applications and games.
                         The very first time I stepped into the programming world in college, I came to realize this was my cup of tea.
@@ -99,7 +111,15 @@
                     <h3 class="fs-3 txtazul pb-2">Languages</h3>
                     <p class="fs-5 mx-4 pt-2 pb-3">HTML, CSS, JAVA, JAVASCRIPT, C#, XML</p>
                     <h3 class="fs-3 txtazul pb-2">Dev Tools</h3>
-                    <p class="fs-5 pt-2 pb-4 tools">VSC Boostrap Materialize Laravel Github Terminal Netbeans</p>
+                    <ul class="fs-5 pb-4 pt-2 tools" type="none">
+                        <li>Visual Studio code</li>
+                        <li>Netbeans</li>
+                        <li>Boostrap</li>
+                        <li>Materialize</li>
+                        <li>Laravel</li>
+                        <li>Guthub</li>
+                        <li>Terminal</li>
+                    </ul>
                 </div>
                 <!--BACK-END-->
                 <div class="col-lg-4 conocimientos back bg-white">
@@ -112,7 +132,16 @@
                     <h3 class="fs-3 txtazul">Languages</h3>
                     <p class="fs-5 mx-4 pt-2 pb-4">PHP, JAVASCRIPT, C#L</p>
                     <h3 class="fs-3 txtazul pb-2">Dev Tools</h3>
-                    <p class="fs-5 pt-2 pb-4 tools">PhpStorm AWS Firebase Ubuntu CloudFlare Wordpress MySQL MongoDB</p>
+                    <ul class="fs-5 pb-4 pt-2 tools" type="none">
+                        <li>PhpStorm</li>
+                        <li>AWS</li>
+                        <li>Firebase</li>
+                        <li>CloudFlare</li>
+                        <li>Ubuntu</li>
+                        <li>Wordpress</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
                 </div>
                 <!--EXTRAS-->
                 <div class="col-lg-4 conocimientos extras bg-white">
@@ -132,9 +161,11 @@
                     <h3 class="fs-3 txtazul">Things I Enjoy doing</h3>
                     <p class="fs-5 mx-4 pt-2 pb-4">PHP, JAVASCRIPT, C#L</p>
                     <h3 class="fs-3 txtazul pb-2">Dev Tools</h3>
-                    <p class="fs-5 pt-2 pb-4 tools">
-                        Figma Unity Android Studio
-                    </p>
+                    <ul class="fs-5 pb-4 pt-2 tools" type="none">
+                        <li>Figma</li>
+                        <li>Unity</li>
+                        <li>Android Studio</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -143,7 +174,7 @@
     <div class="container">
         <!--RECENT WORK-->
         <h2 class="fs-2 mb-2">My recent work</h2>
-        <p class="fs-4 mb-5">Here are a few projects I’ve worked on recently</p>
+        <p class="fs-4 mb-4">Here are a few projects I’ve worked on recently: </p>
         <div class="row justify-content-center">
             @foreach ($rowset as $row)
                 <figure onmouseenter="hoverproyecto(this)" onmouseleave="salirhoverproyecto(this)" class="col-lg-3 cajaprojecto mx-4 @switch($row->logo)
@@ -154,13 +185,13 @@
                     @case($row->logo=="logoanime.png")
                         anime @php $texto="Creation of an free online turn-based RPG card video game." @endphp @break
                 @endswitch">
-                    {{ Html::image('img/home/'.$row->logo,'Logo Proyecto',['class'=>'imgproyecto'])}}
+                    {{ Html::image('img/home/'.$row->logo,'Logo Proyecto',)}}
                     <figcaption>
                         <div class="overlay position-absolute">
-                            <p class="fs-4 text-white texto my-4"> @php echo $texto; @endphp </p>
-                            <a href="#" class="bt-visit fs-4 py-2 px-4">
+                            <p class="text-white texto"> @php echo $texto; @endphp </p>
+                            <a href="{{ url('/portfolio/'.$row->slug) }}" class="bt-visit py-2 px-4 mt-4">
                                 Visit web
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-up-right ms-2 mb-2" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                                 </svg>
@@ -172,10 +203,10 @@
         </div>
         <!--BOTON VIEW MORE-->
         <div class="row justify-content-center py-5">
-            <div class="col-lg-3 mt-3">
+            <div class="col-sm-4 mt-3">
                 <a href="#" class="bt-view fs-4 py-2 px-4">
                     View more
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle ms-2 mb-1" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                     </svg>
                 </a>
@@ -185,21 +216,64 @@
     <hr>
     <!--4ºPARTE-->
     <div class="container">
-        <div class="row justify-content-center py-5">
-            <p class="fs-2 col-lg-4">Some of the companies I have worked for:</p>
+        <div class="row justify-content-center pt-5">
+            <p class="fs-2 col-md-6">Some of the companies I have worked for:</p>
         </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-3">
+        <div class="row justify-content-center align-items-center empresas">
+            <div class="col-md-4 mt-4 logoempresa-1">
                 {{ Html::image('img/home/logoeuropapress.png','Logo Empresa')}}
             </div>
-            <div class="col-lg-3">
+            <div class="col-md-3 logoempresa-2">
                 {{ Html::image('img/home/logoalten.png','Logo Empresa')}}
             </div>
-            <div class="col-lg-3">
+            <div class="col-md-4 logoempresa-3">
                 {{ Html::image('img/home/logookdiario.png','Logo Empresa')}}
             </div>
         </div>
     </div>
+    <!-- script para los efectos del "zoom" -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <!-- script para el swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                //infinito
+                loop:true,
+                //autoplay
+                /*autoplay: {
+                    delay: 3500,
+                    //poder interactuar y seguir el el autoplay
+                    disableOnInteraction: false,
+                }*/
+                //poder "agarrar"
+                grabCursor: true,
+
+                breakpoints: {
+                    580: {
+                        slidesPerView: 1,
+                    },
+                    720: {
+                        slidesPerView: 2,
+                        spaceBetween: 45,
+                    },
+                    800: {
+                        slidesPerView: 2,
+                        spaceBetween: 45,
+                    },
+                    920: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 45,
+                    },
+                }
+            });
+        </script>
 @endsection
 

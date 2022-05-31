@@ -15,41 +15,42 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- libreria de jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+        <!-- libreria swiper css-->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     </head>
     @php $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" @endphp
 <body>
-<!--<div id="loader" class="pageload-overlay" data-opening="m -5,-5 0,70 90,0 0,-70 z m 5,35 c 0,0 15,20 40,0 25,-20 40,0 40,0 l 0,0 C 80,30 65,10 40,30 15,50 0,30 0,30 z">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
-        <path d="m -5,-5 0,70 90,0 0,-70 z m 5,5 c 0,0 7.9843788,0 40,0 35,0 40,0 40,0 l 0,60 c 0,0 -3.944487,0 -40,0 -30,0 -40,0 -40,0 z"></path>
-    </svg>
-</div>-->
     <!--HEADER-->
     <header>
         <!--MENU-->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container justify-content-center fs-4 pb-3">
-                <div class="row align-items-center text-center contenedornav">
-                    <!--SVG MENU
-                    <div class="position-absolute svgheader">
-                        {{ Html::image('img/header/svgnav.svg') }}
-                    </div>-->
+        <nav class="navbar-expand-md">
+            <div class="container justify-content-center fs-3 contenedornav">
+                <div class="row align-items-center text-center rowrnav">
                     <!--LOGO-->
-                    <div class="col-lg-3">
+                    <div class="col-md-2 logo-cabeza">
                         <div class="logo">
                             <a class="navbar-brand" href="{{ route('home') }}">
-                                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'imagenlogo']) }}                Pablo_hg
+                                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'imagenlogo']) }}
                             </a>
                         </div>
                     </div>
+                    <!--BOTON RESPONSIVE-->
+                    <button class="navbar-toggler bt-menu position-absolute rounded-circle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                    </button>
                     <!--PESTAÑAS-->
-                    <div class="col-lg-6">
+                    <div class="col-md-8 pestañas">
                         <div class="collapse navbar-collapse nav justify-content-center" id="navbarNavDropdown">
                             <ul class="navbar-nav text-uppercase fw-bold menu">
                                 <li class="nav-item">
                                     <a class="nav-link px-2 @if( $link==route('home') ) activo @endif" href="{{ route('home') }}">Home</a>
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link px-2 @if( $link==route('portfolio') ) activo @endif" href="{{ route('portfolio') }}">Portfolio</a>
+                                    <a class="nav-link @if( $link==route('portfolio') ) activo @endif" href="{{ route('portfolio') }}">Portfolio</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-2 @if( $link==route('roadmap') ) activo @endif" href="{{ route('roadmap') }}">Roadmap</a>
@@ -58,13 +59,9 @@
                         </div>
                     </div>
                     <!--CONTACTO-->
-                    <div class="col-lg-3">
-                        <a href="{{ route('contact') }}" class="bt-contact text-uppercase border border-white py-1 px-3">contact</a>
+                    <div class="col-md-2 contacto">
+                        <a href="{{ route('contact') }}" class="bt-contact text-uppercase border border-white py-1 px-2 fw-bold @if( $link==route('contact') )activo-contact @endif">contact</a>
                     </div>
-                    <!--BOTON RESPONSIVE-->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 </div>
             </div>
         </nav>
@@ -73,19 +70,19 @@
             <!--CAMBIAR DEPENDIENDO DE LA PESTAÑA-->
             <div class="container">
                 <!--PRESENTACION-->
-                <div class="row align-items-center justify-content-center pt-5 titulo">
+                <div class="row align-items-center justify-content-center titulo">
                     @switch($link)
                         @case($link==route('home')) <!--HOME-->
-                            <div class="fullstack">
+                            <div class="fullstack col-sm-6 text-center">
                                 <h1 class="fw-bold text-white">Hi, I’m Pablo FullStack Developer</h1>
                             </div>
                             <!--LOGO-->
-                            <div class="col-lg-3">
-                                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'logogrande']) }}
+                            <div class="logo">
+                                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'logogrande w-100']) }}
                             </div>
                             @break
                         @case($link==route('portfolio')) <!--PORTFOLIO-->
-                        <div class="fullstack text-white fw-bold text-center">
+                        <div class="fullstack text-white fw-bold text-center mt-5 col-sm-9">
                             <h1 class="fw-bold">FullStack developer portfolio</h1>
                             <p class="fs-5">From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS.
                                 Check out my latest web software development portfolio projects.
@@ -97,14 +94,26 @@
                             <h1 class="fw-bold text-white">roadmap</h1>
                         </div>
                             @break
+                        @case($link==route('contact')) <!--CONTACT-->
+                            <div class="fullstack text-center text-white col-sm-6 mt-5 fw-bold">
+                                <h1>Get in touch</h1>
+                                <p class="fs-5">
+                                    If you wanna get in touch, talk to me about a project collaboration or just say hi,
+                                    fill up the awesome form below.
+                                </p>
+                            </div>
+                            @break
                     @endswitch
                 </div>
-                <!--SVGS-->
-                <div class="svgs">
-                    {{ Html::image('img/header/Vector.png', 'svg base',['class'=>'svgbase position-absolute']) }}
-                    {{ Html::image('img/header/Vector-1.png', 'svg izquierda ola',['class'=>'svgizq position-absolute']) }}
-                    {{ Html::image('img/header/Vector-2.png', 'svg derecha ola',['class'=>'svgdere position-absolute']) }}
-                </div>
+
+            </div>
+            <!--SVGS-->
+            <div class="svgs">
+                <svg width="100%" height="100%" viewBox="0 0 1440 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M716.5 207.56C410.399 207.56 141.804 186.069 -9 154V264H1442V154C1291.2 186.069 1022.6 207.56 716.5 207.56Z" fill="white"/>
+                    <path d="M3 209.333L62.9583 186.11C122.917 162.451 242.833 116.66 362.75 104.667C482.667 92.6736 602.583 116.66 722.5 127.89C842.417 139.556 962.333 139.556 1082.25 116.333C1202.17 92.6736 1322.08 46.8819 1382.04 23.2229L1442 0V209.333H1321C1261.04 209.333 1188.92 209.333 1069 209.333C949.083 209.333 923.917 209.333 804 209.333C684.083 209.333 806.917 209.333 687 209.333C567.083 209.333 587.958 209.333 528 209.333H318.5H3Z" fill="white" fill-opacity="0.21"/>
+                    <path d="M1442 209.333L1381.54 186.11C1321.08 162.451 1200.17 116.66 1079.25 104.667C958.333 92.6736 837.417 116.66 716.5 127.89C595.583 139.556 474.667 139.556 353.75 116.333C232.833 92.6736 111.917 46.8819 51.4583 23.2229L-9 0V209.333H166.5C226.958 209.333 255.083 209.333 376 209.333C496.917 209.333 595.583 209.333 716.5 209.333C837.417 209.333 946.083 209.333 1067 209.333C1187.92 209.333 1288.54 209.333 1349 209.333H1381.54H1442Z" fill="white" fill-opacity="0.21"/>
+                </svg>
             </div>
         </section>
     </header>
@@ -128,7 +137,7 @@
                     <!--REDES-->
                     <div class="row justify-content-center">
                         <!--CORREO-->
-                        <a href="mailto:phghorcajada@gmail.com" target="_blank" class="bt-redes text-center pt-3 mx-3" id="red">
+                        <a href="mailto:pablohg.contact@gmail.com" target="_blank" class="bt-redes text-center pt-3 mx-3" id="red">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                             </svg>
@@ -147,26 +156,26 @@
                         </a>
                     </div>
                     <!--HERRAMIENTAS-->
-                    <div class="row justify-content-center my-5 text-white opacity-75">
-                        <br> Made with
-                        {{ Html::image('img/footer/logolaravel.png', 'Logo laravel',['class'=>'logolaravel mt-2 ms-2']) }}
-                        {{ Html::image('img/footer/logoboostrap.png', 'Logo boostrap',['class'=>'logoboostrap mt-3']) }}
+                    <div class="row justify-content-center my-5 text-white opacity-75 herramientas">
+                        <div class="text-center made pt-4 ">Made with</div>
+                        <div class="col-sm-3 laravel">{{ Html::image('img/footer/logolaravel.png', 'Logo laravel',['class'=>'logolaravel mt-2 ms-2']) }}</div>
+                        <div class="col-sm-1 boost">{{ Html::image('img/footer/logoboostrap.png', 'Logo boostrap',['class'=>'logoboostrap mt-3']) }}</div>
                     </div>
                     <!--COPY-->
-                    <div class="row justify-content-center pb-4 text-white opacity-50">
+                    <div class="row justify-content-center text-center pb-4 text-white opacity-50">
                         Copyright © 2022 Pablohg • Madrid based Front-End & Back-End Developer
                     </div>
                 </div>
                 <!--PREFOOTER-->
                 <div class="row position-absolute prefooter align-items-center justify-content-center">
-                    <div class="col-lg-3 text-white fs-2 fw-bold text-center ">
+                    <div class="col-sm-3 text-white fs-2 fw-bold text-center info1">
                         Start a project
                     </div>
-                    <div class="col-lg-4 text-white fs-5 text-center mx-5">
+                    <div class="col-sm-5 text-white fs-5 text-center mx-2 info2">
                         Interested in working together? We should meet to chat. I’ll buy the coffee.
                     </div>
-                    <div class="col-lg-3 fs-3 text-center">
-                        <a href="#"  class="bt-contact2 border border-info  mt-4 px-4 py-2">
+                    <div class="col-sm-3 fs-4 text-center info3">
+                        <a href="{{ route('contact') }}" class="bt-contact2 border border-info  py-2 px-2 d-block">
                             Let’s do this
                         </a>
                     </div>
@@ -175,8 +184,8 @@
         </div>
     </footer>
 </body>
-    <!-- JavaScript -->
+    <!-- JavaScript del header y el footer-->
+    <script src="{{ asset('js/header-footer.js') }}"></script>
 
-    <!-- script para el filtrador -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </html>

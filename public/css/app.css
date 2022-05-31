@@ -2,7 +2,7 @@
 body,main,nav{
     font-family: inherit;
 }
-.contenedornav{
+.rownav{
     width: 100%;
 }
 /*LOGO*/
@@ -27,20 +27,71 @@ a.bt-contact2:hover{
 }
 /*BOTON CONTACTO*/
 
-
 /*MENU*/
 nav{
     background: linear-gradient(#6DBCFF,#5EAAEB);
     height: 6.625rem;
 }
-
+button.bt-menu{
+    top: 1%;
+    width: 12%;
+    height: 4%;
+    left: 43%;
+    border: 1px Solid white;
+}
+/*HAMBUERGESA Y CRUZ DEL MENU*/
+.animated-icon2{
+    height: 20px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+}
+.animated-icon2 span{
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.animated-icon2 span {
+    background: white;
+}
+.animated-icon2 span:nth-child(1) {
+    top: 0px;
+}
+.animated-icon2 span:nth-child(2), .animated-icon2 span:nth-child(3) {
+    top: 10px;
+}
+.animated-icon2 span:nth-child(4) {
+    top: 20px;
+}
+.animated-icon2.open span:nth-child(1),.animated-icon2.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+.animated-icon2.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+.animated-icon2.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+/*HAMBUERGESA Y CRUZ DEL MENU*/
 li a.activo{
     color: #1D67A6;
 }
 li a.activo:hover{
     color: #1D67A6;
 }
+a.activo-contact{
+    background: white!important;
+    color: #6cbbfe!important;
+}
 /*EFECTO DEL MENU*/
+.menu{
+    margin-top: 1rem;
+}
 .menu a{
     position: relative;
     color: white;
@@ -48,7 +99,7 @@ li a.activo:hover{
 .menu a:hover{
     color: white;
 }
-.menu a::before {
+.menu a:before {
     content: '';
     position: absolute;
     bottom: 5px;
@@ -61,6 +112,7 @@ li a.activo:hover{
     transform-origin: center;
     /*tiempo y efecto de la animacion*/
     transition: transform 0.25s ease-in-out;
+    border-radius: 50px;
 }
 .menu a:hover::before {
     transform: scaleX(1);
@@ -70,14 +122,7 @@ li a.activo:hover{
 
 /*SECTION DEL HEADER*/
 header section{
-    height: 31.438rem;
     background:linear-gradient(#5EAAEB,#266AA4);
-}
-header .titulo  {
-    height: 15.625rem;
-}
-header .fullstack{
-    width: 60%;
 }
 header h1{
     font-size: 50px;
@@ -86,16 +131,14 @@ header .posnav{
     width: 1000px;
 }
 img.logogrande{
-    width: 12.5rem;
-    border-radius: 6.25rem;
+    border-radius: 100%;
 }
 img.svgbase,img.svgizq,img.svgdere{
     left: 0;
     width: 100%;
 }
 img.svgbase{
-    margin-top: 128px;
-    height: 8rem;
+    margin-top: 160px;
 }
 img.svgizq{
     margin-top: -23px;
@@ -103,9 +146,22 @@ img.svgizq{
 img.svgdere{
     margin-top: -12px;
 }
+.pestañas{
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgnav.svg);
+    background-size: 100%;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+.titulo .logo{
+    width: 16.5%;
+}
+.svgs{
+    margin-top: -5%;
+}
 
 
-/*MAIN***********************/
+/*MAIN*******************************/
 section.main{
     padding-bottom: 12rem;
     background-color: #ffffff;
@@ -114,6 +170,45 @@ section.main{
 
 /*1ºPARTE HOME*/
 /*CARROUSEL*/
+.container .swiper-slide .card-description {
+    padding: 1rem 1rem;
+    box-shadow: 0px 0px 10px 0px #888888;
+    border-radius: 25px;
+}
+.card-text{
+    font-size: 18px;
+}
+.card-description img{
+    width: 75%;
+}
+/*FLECHITAS*/
+.swiper-button-next,.swiper-button-prev{
+    position: relative !important;
+    color: transparent!important;
+    transition: 0.5s;
+}
+.swiper-button-prev{
+    left: 40px!important;
+}
+.swiper-button-next{
+    right: -15px!important;
+}
+.swiper-button-prev,.swiper-button-next,.swiper-button-prev:hover,.swiper-button-next:hover{
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.swiper-button-prev{
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/left.png);
+}
+.swiper-button-next{
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/right.png);
+}
+.swiper-button-prev:hover{
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/left-hover.png);
+}
+.swiper-button-next:hover{
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/right-hover.png);
+}
 /*CARROUSEL*/
 
 
@@ -131,9 +226,9 @@ a.bt-learn:hover{
     border: 1px Solid #6cbbfe;
 }
 /*BOTON LEANR*/
-/*1ºPARTE HOME*/
+/*1ºPARTE HOME**************************************************/
 
-/*2ºPARTE HOME*/
+/*2ºPARTE HOME**************************************************/
 .container2{
     padding-bottom: 45rem;
 }
@@ -151,32 +246,32 @@ a.bt-learn:hover{
 }
 .front{
     padding-bottom: 1.89rem;
-    border-top-left-radius: 1.563rem!important;
-    border-bottom-left-radius: 1.563rem!important;
+    border-top-left-radius: 1.563rem;
+    border-bottom-left-radius: 1.563rem;
 
 }
 .extras{
     padding-bottom: 9.39rem;
-    border-top-right-radius: 1.563rem!important;
-    border-bottom-right-radius: 1.563rem!important;
+    border-top-right-radius: 1.563rem;
+    border-bottom-right-radius: 1.563rem;
 }
 svg.logoback{
-    margin-top: 0.89rem!important;
-    margin-bottom: 0.8rem!important;
+    margin-top: 0.89rem;
+    margin-bottom: 0.8rem;
 }
 .conocimientos{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-top: 0.5px Solid #8D8D8D;
 }
 .tools{
-    margin: 0 9rem;
+    padding-left: 0px;
 }
 .txtazul{
     color: #2098FF;
 }
-/*2ºPARTE HOME*/
+/*2ºPARTE HOME**************************************************/
 
-/*3ºPARTE HOME*/
+/*3ºPARTE HOME**************************************************/
 /*CAJAS PROYECTOS*/
 .cajaprojecto{
     border-radius: 25px;
@@ -184,7 +279,7 @@ svg.logoback{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .santa img,.crash img,.anime img{
-    width: 16.625rem;
+    width: 90%;
 }
 .santa{
     background: #EF773C;
@@ -200,19 +295,20 @@ svg.logoback{
 }
 .overlay{
     background: linear-gradient(#6DBCFF,#1D67A6) ;
-    height: 231px;
-    width: 330px;
+    height: 14.75rem;
+    width: 20.625rem;
     opacity: 0;
     transition: .45s ease-in-out;
-    margin-top: -230px;
-    margin-left: -14px;
+    margin-top: -235px;
+    margin-left: -13px;
     border-radius: 25px;
 }
 .overlay:hover{
     opacity: 1;
 }
-.overlay p.texto    {
-    margin: 0 1.75rem;
+.overlay p.texto{
+    margin: 2rem 1.75rem 2rem 1.75rem;
+    font-size: 1.25rem;
 }
 /*CAJAS PROYECTOS*/
 /*BOTON VIEW*/
@@ -240,17 +336,24 @@ a.bt-visit{
     transition: all 0.5s ease;
     color: white;
     border: 2px Solid #6cbbfe;
+    font-size: 1.5rem;
 }
 a.bt-visit:hover{
     background: #6cbbfe;
     color: white;
 }
 /*BOTON VISIT*/
-/*3ºPARTE HOME*/
+/*3ºPARTE HOME****************************************************/
 
-/*1ºPARTE PORTFOLIO*/
+/*4ºPARTE HOME****************************************************/
+.logoempresa-2{
+
+}
+/*4ºPARTE HOME***/
+
+/*1ºPARTE PORTFOLIO***********************************************/
 .filtros{
-    margin-top: 2.5rem;
+    margin-top: -1.5rem;
 }
 a.filtro{
     border-radius: 25px;
@@ -269,8 +372,12 @@ a.filtro{
     color: white;
     font-size: 16px;
 }
-.filtro1{
-    padding-top: 12px;
+.filtros a.ct_item-active{
+    background: #1D67A6;
+    color: white;
+}
+a.filtro1{
+    padding: 12px 0;
 }
 
 .filtro3{
@@ -309,13 +416,9 @@ a.filtro{
 .filtros .filtro16{
     margin-left: 8px;
 }
-.filtros a.ct_item-active{
-    background: #1D67A6;
-    color: white;
-}
-/*1ºPARTE PORTFOLIO*/
+/*1ºPARTE PORTFOLIO********************************************/
 
-/*2ºPARTE PORTFOLIO*/
+/*2ºPARTE PORTFOLIO*******************************************/
 /*EFECTO DESAPARECION*/
 .proyectos .proyecto{
     display: flex;
@@ -346,6 +449,11 @@ a.filtro{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
+}
+.proyecto1::before,.proyecto2::before,.proyecto3::before,.proyecto4::before{
+    background-size: 100%;
+    content: '';
 }
 .proyectos .card .proyecto1::before{
     background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/anime2.png);
@@ -372,13 +480,13 @@ a.filtro{
     transition-delay: 0.25s;
     border-radius: 15px;
 }
+/*imagen de fondo del hover*/
 .proyectos .card:hover .contentBx::before{
     transform: translateY(0px);
     transition: transform 0.5s ease-in-out;
     transform-origin: top;
     transition-delay: 0s;
 }
-
 .proyectos .card .contentBx{
     display: flex;
     flex-direction: column;
@@ -417,26 +525,94 @@ span.tecnicas{
     padding: 5px 10px;
 }
 /*HOVER PROYECTOS*/
-/*2ºPARTE PORTFOLIO*/
+/*2ºPARTE PORTFOLIO************************************/
 
-/*BOX PREFOOTER*/
+/*VER PROYECTO*************************************/
+img.carrousel-proyecto{
+    border-radius: 25px;
+}
+a.bt-web{
+    background: #67B4F6;
+    border-radius: 15px;
+    padding: 15px 10px;
+    font-size: 14px;
+}
+ul.tecnicas{
+    margin-left: -10px;
+}
+/*VER PROYECTO**************************************/
+
+/*CONTACTO************************************/
+
+:focus{outline: none;}
+
+.col-sm-5{
+    width: 44%!important;
+    position: relative;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+.col-sm-12{
+    width: 90%!important;
+    position: relative;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+input[type="text"],textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+.message{
+    height: 90px;
+}
+.name{
+    margin-right: 0.5rem;
+}
+.email{
+    margin-left: 0.5rem;
+}
+.effect-20{
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+    transition: 0.4s;
+    background: transparent;
+}
+
+.effect-20 ~ .focus-border:before,
+.effect-20 ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.3s;}
+.effect-20 ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
+.effect-20 ~ .focus-border i:before,
+.effect-20 ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #3399FF; transition: 0.4s;}
+.effect-20 ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0;}
+.effect-20:focus ~ .focus-border:before,
+.effect-20:focus ~ .focus-border:after,
+.has-content.effect-20 ~ .focus-border:before,
+.has-content.effect-20 ~ .focus-border:after{width: 100%; transition: 0.3s;}
+.effect-20:focus ~ .focus-border i:before,
+.effect-20:focus ~ .focus-border i:after,
+.has-content.effect-20 ~ .focus-border i:before,
+.has-content.effect-20 ~ .focus-border i:after{height: 100%; transition: 0.4s;}
+.effect-20 ~ label{position: absolute; left: 14px; top: 10px; color: #aaa; transition: 0.3s; z-index: 0; letter-spacing: 0.5px;}
+.effect-20:focus ~ label, .has-content.effect-20 ~ label{top: -18px; left: 0; font-size: 12px; color: #3399FF; transition: 0.3s;}
+/*CONTACTO************************************/
+
+/*BOX PREFOOTER********************/
 footer .prefooter{
     height: 10.313rem;
     background-color: #1D67A6;
     border-radius: 1.563rem;
     bottom: 105%;
-    left: 3.5%;
+    left: 8%;
 }
 
-/*FOOTER*/
+/*FOOTER************************************/
 footer{
     background-image: linear-gradient(0deg,#266AA4,#6DBCFF);
-    height: 39rem;
+    height: 100%;;
     padding-top: 6.5rem;
 }
 
 /*REDES DEL FOOTER*/
-
 a.bt-redes{
     text-decoration: none;
     width: 4rem;
@@ -453,30 +629,398 @@ a.bt-redes:hover{
 /*REDES DEL FOOTER*/
 
 /*IMAGENES DEL FOOTER*/
+.herramientas{
+    margin-left: -15px!important;
+}
+.made{
+    width: 9% !important;
+    margin-right: 50px;
+}
 img.logolaravel{
-    width: 15.313rem;
     height: 4rem;
 }
 img.logoboostrap{
-    width: 5.25rem;
     height: 3rem;
 }
 /*IMAGENES DEL FOOTER*/
+/*FOOTER*****************************************/
 
 
 
-@media (min-width: 992px){
-    nav:before{
-        content: "";
-        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgnav.svg);
-        background-size: cover;
-        height: 6.625rem;
-        width: 52.813rem;
-        left: 32.875rem;
-        position: absolute;
+/*RESPONSIVE***************************************/
+@media (max-width: 1400px) {
+    ul.menu{
+            margin-top: 10px!important;
+    }
+    li.mx-4{
+        margin: 0 0.25rem!important;
+    }
+    .overlay{
+        width: 17.85rem;
+        height: 12.5rem;
+        margin-top: -200px;
+    }
+    .overlay p.texto{
+        margin-top: 1rem;
+    }
+    logoempresa-1{
+        margin-left: -150px;
+    }
+    footer .prefooter{
+        left: 1%;
+        right: 1%;
+    }
+    .container2 .tabla{
+        left: 51%;
+    }
+    a.filtro{
+        height: 10% !important;
+    }
+    .swiper-button-prev{
+        left:30px!important;
     }
 }
+@media (max-width: 1200px) {
+    ul.menu{
+        margin-top: 5px!important;
+        font-size: 1.5rem;
+    }
+    .container2 .tabla{
+        margin-top: 17rem;
+    }
+    .overlay{
+        width: 15rem;
+        height: 10.55rem;
+        margin-top: -167px;
+    }
+    .overlay p.texto{
+        font-size: 1rem;
+    }
+    a.bt-visit{
+        font-size: 1rem;
+    }
+    .container2{
+        padding-bottom: 48rem;
+    }
+    .herramientas {
+        margin-left: -110px!important;
+    }
+    .made{
+        width: 10% !important;
+        margin-right: 0!important;
+    }
+    a.filtro1{
+        font-size: 14px;
+    }
+    .swiper-button-prev{
+        left: 20px!important;
+    }
 
-/****************************************/
+    .swiper-button-prev{
+        left:20px!important;
+    }
+    header h1{
+        font-size: 40px;
+    }
+}
+@media (max-width: 990px) {
+    ul.menu{
+        margin-top: 0!important;
+        font-size: 1.25rem;
+    }
+    .menu a::before {
+        left: 5px;
+        width: 90%;
+        bottom: 8px;
+    }
+    .titulo .logo {
+        width: 25%;
+    }
+    .container2 .tabla{
+        margin-top: 55rem;
+        left: 51.5%;
+    }
+    .front{
+        border-top-left-radius: 1.563rem;
+        border-top-right-radius: 1.563rem;
+        border-top-left-radius: 1.563rem;
+        border-bottom-left-radius: 0rem;
+    }
+    .extras{
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 1.563rem;
+        border-bottom-right-radius: 1.563rem;
+        padding-bottom: 0;
+    }
+    .container2{
+        padding-bottom: 125rem;
+    }
+    .logoempresa-1{
+        margin-left: 0px;
+    }
+    .logoempresa-2 {
+        margin-left: 50px;
+    }
+    .logoempresa-1 img{
+        width: 125%;
+    }
+    .logoempresa-2 img{
+        width: 50%;
+    }
+    .logoempresa-3 img{
+        width: 100%;
+    }
+    .overlay{
+        width: 22.5rem;
+        height: 16.3rem;
+        margin-top: -260px;
+        font-size: 1.25rem;
+        padding-top: 30px;
+    }
+    .overlay p.texto,.overlay a.bt-visit{
+        font-size: 1.25rem;
+    }
+    .herramientas {
+        margin-left: -110px!important;
+    }
+    .made{
+        width: 13% !important;
+        margin-right: 0!important;
+    }
+    .boost{
+        margin-left: 75px;
+    }
+    .cajaprojecto{
+        width: 50% !important;
+    }
+    a.filtro1{
+        padding: 6px;
+        font-size: 12px!important;
+    }
+    .swiper-button-prev{
+        left: 0px!important;
+    }
+}
+@media (max-width: 770px) {
+    footer .prefooter{
+        left: 5% !important;
+        right: 5%!important;
+    }
+    .container{
+        max-width: 670px!important;
+    }
+    /*.contenedornav:before{
+        content: '';
+        content: '';
+        position: absolute;
+        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svg-fondo-menu.svg);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        transform: translateY(-15px);
+        transition: transform 0.5s ease-in-out;
+        background-position-x: -11px;
+    }*/
+    .logo-cabeza{
+        width: 20% !important;
+    }
+    .pestañas{
+        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgmenu.png);
+        width: 60% !important;
+        background-position-y: -45px;
+        padding-top: 40px!important;
+    }
+    .contacto{
+        width: 10% !important;
+        font-size: 1.25rem;
+    }
+    .container2 .tabla{
+        margin-top: 54rem;
+        left: 52%;
+    }
+    .logoempresa-1 img{
+        width: 65%;
+    }
+    .logoempresa-2{
+        margin-left: 0;
+    }
+    .logoempresa-2 img{
+        width: 15%;
+    }
+    .logoempresa-3 img{
+        width: 70%;
+    }
+    figure{
+        width: 65%!important;
+    }
+    .overlay{
+        width: 21rem;
+        height: 15rem;
+        margin-top: -240px;
+        padding-top: 20px;
+    }
+    .made{
+        width: 17% !important;
+        margin-right: 0!important;
+    }
+    .boost{
+        margin-left: 110px;
+    }
+    .card-description{
+        height: 210px!important;
+    }
+    .swiper-button-next{
+        right: 0px!important;
+    }
+}
+@media (max-width: 580px)   {
+    .contacto{
+        font-size: 1.15rem;
+        margin-left: -25px;
+    }
+    .container2 .tabla{
+        left: 52.5%;
+        margin-top: 56rem;
+    }
+    .container2{
+        padding-bottom: 130rem;
+    }
+    figure.cajaprojecto{
+        width: 65% !important;
+    }
+    .overlay{
+        width: 22.55rem!important;
+        height: 16.2rem!important;
+        margin-top: -258px!important;
+        padding-top: 30px!important;
+    }
+    footer{
+        padding-top: 10rem;
+    }
+    footer .prefooter{
+        width: 80%;
+        left: 13%!important;
+        height: 16rem;
+    }
+    .prefooter .info1{
+        margin-top: 10px;
+        width: 70%;
+    }
+    .prefooter .info2{
+        width: 80%!important;
+        margin-bottom: 10px;
+    }
+    .prefooter .info3{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+    .made{
+        width: 80% !important;
+        margin-right: -80px!important;
+    }
+    .laravel{
+        width: 40% !important;
+        margin-left: 45px;
+    }
+    .boost{
+        width: 10% !important;
+        margin-left: 40px!important;
+    }
+    .filtro{
+        width: 15% !important;
+    }
+    .nombre-filtro{
+        display: none;
+    }
+    a.filtro1{
+        padding: 8px;
+    }
+    .proyecto{
+        width: 350px!important;
+        height: 202px!important;
+    }
+    .card-description img{
+        width: 75% !important;
+    }
+    .col-sm-10{
+        flex: 0 0 auto;
+        width: 70% !important;
+    }
+    .col-sm-1{
+        flex: 0 0 auto;
+        width: 10% !important;
+    }
+    .swiper-button-prev{
+        left: -10px!important;
+    }
+    .titulo .logo {
+        width: 50%;
+        margin: 1rem auto;
+    }
+    span.tecnicas{
+        font-size: 12.5px;
+    }
+    .proyectos .card:hover .contentBx .content2{
+        transform: translateY(25px);
+        transition-delay: 0.75s;
+    }
+    a.bt-contact{
+        margin-left: -6px;
+    }
+
+}
+@media (max-width: 460px) {
+    .logo-cabeza{
+        margin-top: -40px!important;
+    }
+    .contacto{
+        font-size: 1rem;
+        margin-left: -35px!important;
+        margin-top: -35px!important;
+    }
+    .container2{
+        padding-bottom: 133rem;
+    }
+    .container2 .tabla{
+        margin-top: 60rem;
+    }
+    .overlay {
+        width: 16rem!important;
+        height: 11.2rem!important;
+        margin-top: -179px!important;
+        padding-top: 0!important;
+    }
+    .overlay p.texto{
+        margin-bottom: 1rem;
+    }
+    .overlay p.texto, .overlay a.bt-visit{
+        font-size: 1.05rem;
+    }
+    .made{
+        width: 70% !important;
+        margin-right: -85px!important;
+    }
+    .laravel{
+        width: 50% !important;
+        margin-left: 50px;
+    }
+    .boost{
+        margin-left: 30px!important;
+    }
+    a.filtro1{
+        height: 50px!important;
+        font-size: 12px;
+        padding-top: 8px!important;
+    }
+    .prefooter .info1{
+        width: 80%;
+        font-size: 1.5rem!important;
+    }
+    .prefooter .info2{
+        font-size: 1.15rem!important;
+    }
+}
 
 

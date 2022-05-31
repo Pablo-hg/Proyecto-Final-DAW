@@ -21,8 +21,13 @@ use App\Http\Controllers\AuthController;
 //Front-end
 Route::get('/', [AppController::class, 'index'])->name('home');
 Route::get('portfolio', [AppController::class, 'portfolio'])->name('portfolio');
+Route::get('portfolio/{proyecto}', [AppController::class, 'proyecto'])->name('proyecto');
 Route::get('roadmap', [AppController::class, 'roadmap'])->name('roadmap');
 Route::get('contact', [AppController::class, 'contact'])->name('contact');
+Route::post('contact', [AppController::class, 'enviar'])->name('enviar');
+
+
+
 
 //Back-end
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
