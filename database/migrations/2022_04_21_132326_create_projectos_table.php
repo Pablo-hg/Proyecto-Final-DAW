@@ -34,7 +34,6 @@ class CreateProjectosTable extends Migration
             $table->string('enlace3', 128)->nullable();
             $table->dateTime('fecha')->nullable();
             $table->tinyInteger('activo')->nullable(false)->default(0);
-            $table->tinyInteger('home')->nullable(false)->default(0);
             $table->tinyInteger('projects')->nullable(false)->default(0);
 
             //Columnas created_at y updated_at

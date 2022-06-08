@@ -3,9 +3,22 @@
 @section('content')
 
     @php
-        $nombrefiltros = ['Front-end','Back-end','Html5','Css3','Javascript','Java',"C",'Php','Mysql','React','Laravel','Bootstrap','Unity','Figma','Android','Videogame'];
-        $filtrarpor = ['FRONT-END','BACK-END','HTML5','CSS3','JAVASCRIPT','JAVA',"C#",'PHP','MYSQL','REACT','LARAVEL','BOOTSTRAP','UNITY','FIGMA','ANDROID','VIDEOGAME'];
+        $nombrefiltros = ['Front-end','Back-end','Html5','Css3','Javascript','Java',"C",'Php','Mysql','React','Laravel','Bootstrap','Unity','Figma','Android','Videogame','Materialize','Tailwind','Firebase','Playfab'];
+        $filtrarpor = ['FRONT-END','BACK-END','HTML5','CSS3','JAVASCRIPT','JAVA',"C#",'PHP','MYSQL','REACT','LARAVEL','BOOTSTRAP','UNITY','FIGMA','ANDROID','VIDEOGAME','MATERIALIZE','TAILWIND','FIREBASE','PLAYFAB'];
+        $_SESSION['enlaces'] = [];
     @endphp
+
+    <div class="container bg-transparent segunda">
+        <div class="row align-items-center justify-content-center titulo">
+            <div class="fullstack text-white fw-bold text-center mt-5 col-sm-9">
+                <h2 class="fw-bold">FullStack developer portfolio</h2>
+                <p class="fs-5">From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS.
+                    Check out my latest web software development portfolio projects.
+                </p>
+            </div>
+        </div>
+    </div>
+
 
         <!--FILTROS-->
         <div class="container filtros mb-4" >
@@ -24,10 +37,11 @@
             <p class="justify-content-center fs-4" id="showing">Showing all projects. Use the filter to list them by skill or technology.</p>
             <div class="row justify-content-center">
                 @foreach ($rowset as $row)
-                    <a href="{{ url('/portfolio/'.$row->slug) }}" class="card col-lg-4 proyecto mx-4 my-4" category="{{$row->alltecnicas}}">
+                    @php array_push($_SESSION['enlaces'],url('/portfolio/'.$row->slug)) @endphp
+                    <a href="{{ url('/portfolio/'.$row->slug) }}" class="card col-lg-4 proyecto mx-4 my-4 cambio" category="{{$row->alltecnicas}}">
                         <div class="imgBx">
                             @php $imagenes = explode(",",$row->imagenes); $i=0 @endphp
-                            {{ Html::image('img/portfolio/proyectos/'.$imagenes[0], 'Imagen de proyecto') }}
+                            {{ Html::image('img/portfolio/proyectos/'.$row->slug."/".$imagenes[0].'.png', 'Imagen de proyecto') }}
                         </div>
                         <div class="justify-content-center contentBx proyecto{{$row->id}}">
                             <div class="content text-uppercase">
@@ -50,8 +64,8 @@
                             </div>
                         </div>
                     </a>
-
                 @endforeach
+
             </div>
         </div>
     <!-- script para el filtrador -->

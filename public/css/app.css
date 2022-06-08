@@ -28,46 +28,43 @@ a.bt-contact2:hover{
 /*BOTON CONTACTO*/
 
 /*MENU*/
-nav{
-    background: linear-gradient(#6DBCFF,#5EAAEB);
-    height: 6.625rem;
-}
 button.bt-menu{
-    top: 1%;
-    width: 12%;
-    height: 4%;
-    left: 43%;
+    top: 12.5px;
+    width: 40px;
+    height: 40px;
+    left: 44.5%;
     border: 1px Solid white;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%) !important;
 }
 /*HAMBUERGESA Y CRUZ DEL MENU*/
 .animated-icon2{
-    height: 20px;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
 }
 .animated-icon2 span{
     position: absolute;
     height: 3px;
-    width: 100%;
-    border-radius: 9px;
+    width: 20px;
     left: 0;
     transform: rotate(0deg);
     transition: .25s ease-in-out;
+    margin-left: -3px;
 }
 .animated-icon2 span {
     background: white;
 }
 .animated-icon2 span:nth-child(1) {
-    top: 0px;
+    top: -10px;
 }
 .animated-icon2 span:nth-child(2), .animated-icon2 span:nth-child(3) {
-    top: 10px;
+    top: 0px;
 }
 .animated-icon2 span:nth-child(4) {
-    top: 20px;
+    top: 10px;
 }
 .animated-icon2.open span:nth-child(1),.animated-icon2.open span:nth-child(4) {
-    top: 11px;
+    top: 0px;
     width: 0%;
     left: 50%;
 }
@@ -122,9 +119,9 @@ a.activo-contact{
 
 /*SECTION DEL HEADER*/
 header section{
-    background:linear-gradient(#5EAAEB,#266AA4);
+    background:linear-gradient(#5DA9EA,#266AA4);
 }
-header h1{
+.primera h1{
     font-size: 50px;
 }
 header .posnav{
@@ -151,7 +148,20 @@ img.svgdere{
     background-size: 100%;
     padding-bottom: 30px;
     background-repeat: no-repeat;
-    height: 100px;
+    height: 115px;
+    transition: 0.5s;
+}
+.primera{
+    margin-top: -435px;
+}
+.segunda,.tercera{
+    margin-top: -450px;
+}
+.titulo{
+    margin-bottom: 15rem;
+}
+.tercera .titulo{
+    margin-bottom: 15rem;
 }
 .titulo .logo{
     width: 16.5%;
@@ -160,12 +170,14 @@ img.svgdere{
     margin-top: -5%;
 }
 
+.fondo{
+    padding-top: 225px;
+}
+
 
 /*MAIN*******************************/
 section.main{
     padding-bottom: 12rem;
-    background-color: #ffffff;
-    background-attachment: fixed;
 }
 
 /*1ºPARTE HOME*/
@@ -346,9 +358,6 @@ a.bt-visit:hover{
 /*3ºPARTE HOME****************************************************/
 
 /*4ºPARTE HOME****************************************************/
-.logoempresa-2{
-
-}
 /*4ºPARTE HOME***/
 
 /*1ºPARTE PORTFOLIO***********************************************/
@@ -454,12 +463,13 @@ a.filtro1{
 .proyecto1::before,.proyecto2::before,.proyecto3::before,.proyecto4::before{
     background-size: 100%;
     content: '';
+    background-repeat: no-repeat;
 }
 .proyectos .card .proyecto1::before{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/anime2.png);
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/Anime-War/hover.png);
 }
 .proyectos .card .proyecto2::before{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/crash2.png);
+    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/Crash-Run/crashover.png);
 }
 .proyectos .card .proyecto3::before{
     background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/santa2.png);
@@ -540,20 +550,50 @@ a.bt-web{
 ul.tecnicas{
     margin-left: -10px;
 }
+a.bt-izq,a.bt-der{
+    position: fixed;
+    top: 45%;
+}
+.bt-izq{
+    left: 100px;
+}
+.bt-der{
+    right: 100px;
+}
 /*VER PROYECTO**************************************/
 
+/*ROADMAP**********************************/
+
+#dibujo{
+    height: 2000px;
+}
+.on .circulo1{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: red;
+    position: fixed;
+    left: 0px;
+}
+.circulo2{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: red;
+    margin-top: 1800px;
+}
+/*ROADMAP**********************************/
+
 /*CONTACTO************************************/
-
 :focus{outline: none;}
-
-.col-sm-5{
-    width: 44%!important;
+.name, .email{
+    width: 46.75%!important;
     position: relative;
     padding-left: 0px!important;
     padding-right: 0px!important;
 }
-.col-sm-12{
-    width: 90%!important;
+.subject{
+    width: 96.5%!important;
     position: relative;
     padding-left: 0px!important;
     padding-right: 0px!important;
@@ -564,6 +604,7 @@ input[type="text"],textarea{
 }
 .message{
     height: 90px;
+    position: relative;
 }
 .name{
     margin-right: 0.5rem;
@@ -571,13 +612,13 @@ input[type="text"],textarea{
 .email{
     margin-left: 0.5rem;
 }
+/*EFECTO INPUTS*/
 .effect-20{
     border: 1px solid #ccc;
     padding: 7px 14px;
     transition: 0.4s;
     background: transparent;
 }
-
 .effect-20 ~ .focus-border:before,
 .effect-20 ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.3s;}
 .effect-20 ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
@@ -594,6 +635,7 @@ input[type="text"],textarea{
 .has-content.effect-20 ~ .focus-border i:after{height: 100%; transition: 0.4s;}
 .effect-20 ~ label{position: absolute; left: 14px; top: 10px; color: #aaa; transition: 0.3s; z-index: 0; letter-spacing: 0.5px;}
 .effect-20:focus ~ label, .has-content.effect-20 ~ label{top: -18px; left: 0; font-size: 12px; color: #3399FF; transition: 0.3s;}
+/*EFECTO INPUTS*/
 /*CONTACTO************************************/
 
 /*BOX PREFOOTER********************/
@@ -645,15 +687,103 @@ img.logoboostrap{
 /*IMAGENES DEL FOOTER*/
 /*FOOTER*****************************************/
 
+/*BOTON PARA SUBIR************************************/
+.ir-arriba{
+    display:none;
+    font-size:30px;
+    color:#0088ff;
+    cursor:pointer;
+    position:fixed;
+    bottom:0;
+    right: 48.2%;
+    z-index:10;
+    height: 105px;
+}
+/*BOTON PARA SUBIR********************************/
+
+/*PANTALLA DE CARGA*************************/
+.arriba,.abajo{
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    z-index: 20;
+}
+.arriba{
+    animation: adios 1s reverse ease-out;
+    top:0%;
+    height: 0%;
+}
+@keyframes adios {
+    from{
+        height: 0%;
+    }
+    33%{
+        height: 100%;
+    }
+    to{
+        height: 100%;
+    }
+}
+.abajo{
+    animation: hola 1s reverse ease-out;
+    top:100%;
+    height: 0%;
+}
+@keyframes hola {
+    from{
+        top:100%;
+        height: 0%;
+    }
+    33%{
+        height: 100%;
+        top:0%;
+    }
+    to{
+        height: 100%;
+        top:0%;
+    }
+}
+/*PANTALLA DE CARGA********************/
+
+/*EFECTO CAMBIAR PROPIEDADES NAV AL DESLIZAR*/
+.navPrincipal .container {
+    font-size: 1.75rem;
+}
+header section .container{
+    margin-top: 115px;
+    transition: 0.5s;
+}
+li.portfolio{
+    margin: 0 1.5rem;
+}
+.navPrincipal{
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    z-index: 15;
+    transition: 0.5s;
+    background: linear-gradient(#6DBCFF,#5DA9EA);
+}
+/*EFECTO CAMBIAR PROPIEDADES NAV AL DESLIZAR*/
+
 
 
 /*RESPONSIVE***************************************/
+@media (max-width: 1768px){
+    .primera{
+        margin-top: -420px;
+    }
+}
 @media (max-width: 1400px) {
     ul.menu{
-            margin-top: 10px!important;
+        margin-top: 10px!important;
     }
     li.mx-4{
         margin: 0 0.25rem!important;
+    }
+    .primera {
+        margin-top: -375px;
     }
     .overlay{
         width: 17.85rem;
@@ -712,6 +842,9 @@ img.logoboostrap{
     a.filtro1{
         font-size: 14px;
     }
+    .swiper-container{
+        z-index: -5;
+    }
     .swiper-button-prev{
         left: 20px!important;
     }
@@ -719,9 +852,16 @@ img.logoboostrap{
     .swiper-button-prev{
         left:20px!important;
     }
-    header h1{
+    .primera h1{
         font-size: 40px;
     }
+    .primera {
+        margin-top: -350px;
+    }
+    .fondo{
+        padding-top: 250px;
+    }
+
 }
 @media (max-width: 990px) {
     ul.menu{
@@ -809,32 +949,21 @@ img.logoboostrap{
     .container{
         max-width: 670px!important;
     }
-    /*.contenedornav:before{
-        content: '';
-        content: '';
-        position: absolute;
-        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svg-fondo-menu.svg);
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        transform: translateY(-15px);
-        transition: transform 0.5s ease-in-out;
-        background-position-x: -11px;
-    }*/
     .logo-cabeza{
         width: 20% !important;
+        z-index: 1;
+        transform: var(--logo,translateX(0px));
+        transition: transform 0.5s ease-in-out;
     }
     .pestañas{
-        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgmenu.png);
+        background-image: none;
         width: 60% !important;
-        background-position-y: -45px;
-        padding-top: 40px!important;
+        padding-bottom: 0;
     }
     .contacto{
         width: 10% !important;
         font-size: 1.25rem;
+        z-index: 1;
     }
     .container2 .tabla{
         margin-top: 54rem;
@@ -966,12 +1095,21 @@ img.logoboostrap{
         transform: translateY(25px);
         transition-delay: 0.75s;
     }
-    a.bt-contact{
-        margin-left: -6px;
-    }
 
 }
 @media (max-width: 460px) {
+    h1{
+        font-size: 2rem!important;
+    }
+    .primera {
+        margin-top: -325px;
+    }
+    .fondo{
+        padding-top: 350px;
+    }
+    .titulo {
+        margin-bottom: 5rem;
+    }
     .logo-cabeza{
         margin-top: -40px!important;
     }
@@ -979,6 +1117,8 @@ img.logoboostrap{
         font-size: 1rem;
         margin-left: -35px!important;
         margin-top: -35px!important;
+        transform: var(--contacto,translateX(0px));
+        transition: transform 0.5s ease-in-out;
     }
     .container2{
         padding-bottom: 133rem;
@@ -1021,6 +1161,62 @@ img.logoboostrap{
     .prefooter .info2{
         font-size: 1.15rem!important;
     }
+    nav::before{
+        background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgmenu.png);
+        content: '';
+        position: absolute;
+        background-size: 100%;
+        width: 100%;
+        height: 220px;
+        background-repeat: no-repeat;
+        transform: var(--before,translateY(-130px));
+        transition: transform 0.5s ease-in-out;
+        z-index: 0;
+        background-position-y: 10px;
+    }
+    ul.menu a{
+        font-size: 16px;
+        background-color: white;
+        color: #67B4F7;
+        border-radius: 1rem;
+    }
+    .collapse{
+        transition: transform 0.25s ease-in-out;
+        transform: var(--collapse);
+    }
+    .ir-arriba{
+        right:42.5%;
+    }
+    li.home{
+        margin: 10px 0 5px 0;
+    }
+    li.portfolio{
+        margin: 0 0 5px 0;
+    }
+    .nav-link{
+        padding: 0.25rem!important;
+    }
+    .fijar.svgs{
+        position: fixed;
+        width: 100%;
+        background-color: #2c70ab;
+        top: 85px;
+        z-index: 15;
+    }
+    .navPrincipal{
+        background: transparent;
+        transition: none;
+        position: fixed;
+    }
+    .fijar.navPrincipal{
+        background: #2c70ab;
+    }
+    .titulo .logo {
+        width: 45%;
+    }
+
+
+
 }
 
 

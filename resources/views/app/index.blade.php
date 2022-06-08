@@ -3,6 +3,17 @@
 @section('content')
     @php $texto=""; @endphp
     <!--1ºPARTE-->
+    <div class="container primera">
+        <div class="row align-items-center justify-content-center titulo">
+            <div class="col-sm-6 text-center">
+                <h1 class="fw-bold text-white">Hi, I’m Pablo, <br>FullStack Developer</h1>
+            </div>
+            <div class="logo">
+                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'logogrande w-100']) }}
+            </div>
+        </div>
+    </div>
+    <!--2ºPARTE-->
     <div class="container">
         <!--CARUSEL-->
         <div class="row justify-content-center">
@@ -78,7 +89,7 @@
             </div>
         </div>
     </div>
-    <!--2ºPARTE-->
+    <!--3ºPARTE-->
     <div class="container2">
         <div class="position-relative d-flex">
             <!--PRESENTACION-->
@@ -165,12 +176,16 @@
                         <li>Figma</li>
                         <li>Unity</li>
                         <li>Android Studio</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Ilustrator</li>
+                        <li>Adobe After Effects</li>
+                        <li>Adobe Premiere</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!--3ºPARTE-->
+    <!--4ºPARTE-->
     <div class="container">
         <!--RECENT WORK-->
         <h2 class="fs-2 mb-2">My recent work</h2>
@@ -189,7 +204,7 @@
                     <figcaption>
                         <div class="overlay position-absolute">
                             <p class="text-white texto"> @php echo $texto; @endphp </p>
-                            <a href="{{ url('/portfolio/'.$row->slug) }}" class="bt-visit py-2 px-4 mt-4">
+                            <a href="{{ url('/portfolio/'.$row->slug) }}" class="bt-visit py-2 px-4 mt-4 cambio">
                                 Visit web
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-up-right ms-2 mb-2" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
@@ -204,7 +219,7 @@
         <!--BOTON VIEW MORE-->
         <div class="row justify-content-center py-5">
             <div class="col-sm-4 mt-3">
-                <a href="#" class="bt-view fs-4 py-2 px-4">
+                <a href="{{ route('portfolio') }}" class="bt-view fs-4 py-2 px-4 cambio">
                     View more
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle ms-2 mb-1" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -214,7 +229,7 @@
         </div>
     </div>
     <hr>
-    <!--4ºPARTE-->
+    <!--5ºPARTE-->
     <div class="container">
         <div class="row justify-content-center pt-5">
             <p class="fs-2 col-md-6">Some of the companies I have worked for:</p>
@@ -244,11 +259,11 @@
                 //infinito
                 loop:true,
                 //autoplay
-                /*autoplay: {
+                autoplay: {
                     delay: 3500,
                     //poder interactuar y seguir el el autoplay
                     disableOnInteraction: false,
-                }*/
+                },
                 //poder "agarrar"
                 grabCursor: true,
 

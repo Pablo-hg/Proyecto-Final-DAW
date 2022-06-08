@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container bg-transparent primera">
+        <div class="row align-items-center justify-content-center titulo">
+            <div class="fullstack text-center text-white col-sm-6 mt-5 fw-bold">
+                <h2>Get in touch</h2>
+                <p class="fs-5">
+                    If you wanna get in touch, talk to me about a project collaboration or just say hi,
+                    fill up the awesome form below.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row mt-2">
             <!-- FORMLARIO -->
@@ -27,7 +38,7 @@
                         </div>
                         <!-- ASUNTO -->
                         <div class="row my-4 justify-content-center">
-                            <div class="col-sm-12 input-effect">
+                            <div class="col-sm-12 subject input-effect">
                                 <input class="effect-20" type="text" placeholder="" name="subject" required="">
                                 <label>Subject</label>
                                 <span class="focus-border">
