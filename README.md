@@ -1,11 +1,36 @@
 COSAS QUE TERMINAR
 
--> añadir los diferentes proyectos en el portfolio
 -> ajustar los tamaños de los margenes ,paddings en las páginas
 -> terminar el roadmap
--> arrgelar los formatos moviles 
--> pensar todas las difenretes partes del roadmap
--> modo admin 
 -> subirlo al host
 -> configuar dominio y todas las rutas
--> añadir un botones a los lados que permita pasar de un proyecto a otro sin necesidad de vovler a portoflio
+-> mirar codepen
+
+
+
+PROYECTOS QUE FALTAN POR AÑADIR EN PORTFOLIO
+    -Proyecto web after effects (boostrap)
+    -Corto after effects
+    -Pang Pong
+    -Práctica API gitgub
+    -Revisar proyctos js y diseño de JC
+    -Web con figma(comparador de precios)
+
+
+ROADMAP
+    -Dejo Bach y entro a grado medio smr
+    -2º SMR
+    -Prácticas Europapress
+    -1ºDAM (descubro programacion como tal)
+    -2ºDAM (progreso muchisimo)
+    -Hago varios proyectos
+    -Desarrolo Anime war
+    -Prácticas alten
+    -2ºWEB (programacion web)
+    -Santaminers
+    -Diferentes Webs y proyectos
+    -Entro a OKdiario
+    -Desarrollo pablohg.com
+
+titulo, texto, imagen, fecha, activo
+

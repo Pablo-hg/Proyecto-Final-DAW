@@ -9,10 +9,12 @@
             </div>
         </div>
     </div>
-    <div class="container off" id="dibujo">
+    <!--<div class="container off" id="dibujo">
         <button onclick="hola()" id="swicht">Hola</button>
         <div class="circulo1"></div>
         <div class="circulo2"></div>
+    </div>-->
+    <div class="container" id="roadmap">
     </div>
 
     <!-- script para el filtrador -->

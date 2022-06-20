@@ -218,7 +218,7 @@
         </div>
         <!--BOTON VIEW MORE-->
         <div class="row justify-content-center py-5">
-            <div class="col-sm-4 mt-3">
+            <div class="col-sm-4 mt-2">
                 <a href="{{ route('portfolio') }}" class="bt-view fs-4 py-2 px-4 cambio">
                     View more
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle ms-2 mb-1" viewBox="0 0 16 16">
@@ -228,10 +228,9 @@
             </div>
         </div>
     </div>
-    <hr>
     <!--5ºPARTE-->
     <div class="container">
-        <div class="row justify-content-center pt-5">
+        <div class="row justify-content-center">
             <p class="fs-2 col-md-6">Some of the companies I have worked for:</p>
         </div>
         <div class="row justify-content-center align-items-center empresas">

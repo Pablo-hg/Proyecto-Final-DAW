@@ -5,15 +5,14 @@
     @foreach ($rowset as $row)
         @php
             $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            $carpetas_imagenes = ['Anime-War','Crash-Run','Santaminers','Santaminers-Minigame'];
-            $izq = "";$der="";$ruta_imagenes="";
+            $izq = "";$der="";$ruta_imagenes="";$texto="";$sitio="";
             for($i=0;$i<count($_SESSION['enlaces']);$i++){
                 if($_SESSION['enlaces'][$i]==$link){
-                    if(reset($_SESSION['enlaces'])==$link){
+                    if(reset($_SESSION['enlaces'])==$_SESSION['enlaces'][$i]){
                         $izq = route('portfolio');
                         $der =$_SESSION['enlaces'][$i+1];
                     }
-                    else if(end($_SESSION['enlaces'])==$link){
+                    else if(end($_SESSION['enlaces'])==$_SESSION['enlaces'][$i]){
                         $der = route('portfolio');
                         $izq =$_SESSION['enlaces'][$i-1];
                     }
@@ -21,12 +20,12 @@
                         $izq =$_SESSION['enlaces'][$i-1];
                         $der =$_SESSION['enlaces'][$i+1];
                     }
-                    $ruta_imagenes = $carpetas_imagenes[$i];
+                    $ruta_imagenes = $_SESSION['carpetas'][$i];
                 }
             }
         @endphp
     <!-- 1ºPARTE -->
-    <div class="container bg-transparent tercera">
+    <div class="container bg-transparent cuarta">
         <div class="row align-items-center justify-content-center titulo">
             <div class="fullstack text-white text-center mt-5 col-sm-9">
                 <h1 class="fw-bold">{{$row->titulo}}</h1>
@@ -37,7 +36,7 @@
         <div class="row justify-content-center">
             <div class="col-sm-9">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    @php $imagenes = explode(",",$row->imagenes); @endphp
+                    @php $imagenes = explode(",",substr($row->imagenes,0,-1)); @endphp
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
                         @for ($i=1;$i<count($imagenes);$i++)
@@ -112,7 +111,7 @@
         <!-- TECHNICAL SHEET -->
         <div class="row justify-content-center fs-5">
             <div class="col-sm-9 text-sm-start">
-                <h3 class="fs-1 mt-1"><strong>Technical Sheet</strong></h3>
+                <h3 class="fs-1 mt-1"><strong>Hoja Técnica</strong></h3>
                 <span class="my-4">Code technologies I got involved with while working on this project.</span><br>
                 <svg class="my-4" width="450" height="1" viewBox="0 0 450 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="0.5" x2="450" y2="0.5" stroke="#B3B3B3"/>
@@ -125,32 +124,47 @@
                 </ul>
             </div>
         </div>
-        <!-- RESORCES -->
+        <!-- RESOURCES -->
         <div class="row justify-content-center fs-5">
             <div class="col-9 text-sm-start">
-                <h3 class="fs-1 mt-1"><strong>Resources</strong></h3>
+                <h3 class="fs-1 mt-1"><strong>Recursos</strong></h3>
                 <svg width="450" height="1" viewBox="0 0 450 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="0.5" x2="450" y2="0.5" stroke="#B3B3B3"/>
                 </svg>
                 <ul class="tecnicas mt-3">
                     <li type="circle" class="my-2">
-                        The web is online at
+                       @php
+                           if(str_contains($row->enlace1, ".be")){$texto="Puedes ver un video del funcionamiento del proyecto en";$sitio="Youtube";}
+                           if(str_contains($row->enlace1, "35.")){$texto="Puedes visitar la web del proyecto";$sitio="aqui";}
+                           if(str_contains($row->enlace1, ".com")){$texto="Puedes visitar la web oficial del proyecto";$sitio=$row->enlace1;}
+                        @endphp
+                        {{$texto}}
                         <a target="_blank" title="{{$row->enlace1}}" href="{{$row->enlace1}}" class="text-decoration-none">
-                            <strong>{{$row->enlace1}}</strong>
+                            <strong>{{$sitio}}</strong>.
                         </a>
                     </li>
+                    @if (!$row->enlace2=="")
                     <li type="circle" class="my-2">
-                        The videogame is playable at
+                        @php
+                                if($row->enlace2==""){$texto="La descarga del proyecto estará disponible";$sitio="Próximamente";}
+                                if(str_contains($row->enlace2, "github")){$texto="La descarga del proyecto está disponible en";$sitio="Github";}
+                                if(str_contains($row->enlace2,"35.")!== false){$texto="Puedes probar el proyecto ";$sitio="aqui";}
+                         @endphp
+                        {{$texto}}
                         <a target="_blank" title="{{$row->enlace2}}" href="{{$row->enlace2}}" class="text-decoration-none">
-                            <strong>{{$row->enlace2}}</strong>
+                            <strong>{{$sitio}}</strong>.
                         </a>
                     </li>
+                    @endif
+                    @if (!$row->enlace3=="")
                     <li type="circle" class="my-2">
-                        The project is downloadable at
+                        @php $texto="Puedes probar el videojuego ";$sitio=$row->enlace3;@endphp
+                        {{$texto}}
                         <a target="_blank" title="{{$row->enlace3}}" href="{{$row->enlace3}}" class="text-decoration-none">
-                            <strong>{{$row->enlace3}}</strong>
+                            <strong>{{$sitio}}</strong>.
                         </a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>

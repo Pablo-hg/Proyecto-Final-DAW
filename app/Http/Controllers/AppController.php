@@ -11,7 +11,7 @@ class AppController extends Controller
 {
     public function index()
     {
-        $rowset = Projectos::where('activo', 1)->where('projects', 1)->orderBy('fecha', 'ASC')->limit('3')->get();
+        $rowset = Projectos::where('activo', 1)->where('projects', 1)->orderBy('created_at', 'ASC')->limit('3')->get();
         return view('app.index',[
             'rowset' => $rowset
         ]);

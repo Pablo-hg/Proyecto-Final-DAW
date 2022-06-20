@@ -1,25 +1,27 @@
 // EFECTO OPACIDAD FILTROS PORTFOLIO
 function hoverfiltro(x) {
     if (document.documentElement.scrollWidth > 580) {
-        x.childNodes[3].style.opacity = 0;
-        x.childNodes[1].style.opacity = 1;
+        x.childNodes[1].style.display = "block";
+        x.childNodes[3].style.display = "none";
     }
 }
 function salirhoversalir(x){
-    x.childNodes[3].style.opacity = 1;
-    x.childNodes[1].style.opacity = 0;
+    x.childNodes[1].style.display = "none";
+    x.childNodes[3].style.display = "block";
+
 }
 
 // EFECTO OPACIDAD FILTROS PORTFOLIO
 
 
 //EFECTO FILTRADOR
-window.onload = function() {
+$(document).ready(function(){
     // AGREGANDO CLASE ACTIVE AL PRIMER ENLACE //
     $('.filtros .filtro[category="all"]').addClass('ct_item-active');
 
     // FILTRANDO PRODUCTOS
     $('.filtro').click(function(){
+        console.log("hola");
         var catProduct = $(this).attr('category');
 
         // AGREGANDO CLASE ACTIVE AL ENLACE SELECCIONADO
@@ -43,7 +45,7 @@ window.onload = function() {
                 }
             }
             if(catProduct=="C")catProduct="C#";
-            document.getElementById("showing").innerHTML = "Showing " + num.toString().bold() + " projects filtered by " + catProduct.bold().toUpperCase() + ".";
+            document.getElementById("showing").innerHTML = "Mostrando " + num.toString().bold() + " projectos filtrados por " + catProduct.bold().toUpperCase() + ".";
         } setTimeout(showProduct,400);
     });
 
@@ -52,10 +54,21 @@ window.onload = function() {
         function showAll(){
             $('.proyecto').show();
             $('.proyecto').css('transform', 'scale(1)');
-            let all = "all projects";
-            document.getElementById("showing").innerHTML = "Showing " + all.bold() + ". Use the filter to list them by skill or technology."
+            let all = "todos los proyectos";
+            document.getElementById("showing").innerHTML = "Mostrando " + all.bold() + ". Usa el filtro para enumerarlos por habilidad o tecnología."
         } setTimeout(showAll,400);
-
     });
-};
+    cargarHover();
+});
 //EFECTO FILTRADOR
+
+
+//Efecto que carga las imagnes "hove" de los proyectos
+function cargarHover(){
+    var numeros = document.getElementById("numeros").innerHTML;
+    for(let k = 1; k <= numeros;k++){
+        var direccion =  document.getElementById("url"+k).innerHTML.substring(0,document.getElementById("url"+k).innerHTML.length);
+        document.getElementById("contentBx"+k).style.setProperty('--hover','url("'+direccion);
+    }
+}
+

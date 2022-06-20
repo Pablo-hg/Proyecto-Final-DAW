@@ -25,6 +25,17 @@ a.bt-contact2:hover{
     background: white;
     color: #6cbbfe;
 }
+.redes{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.redes a{
+    padding: 5px;
+}
+.redes a svg{
+    height: 35px;
+}
 /*BOTON CONTACTO*/
 
 /*MENU*/
@@ -32,7 +43,7 @@ button.bt-menu{
     top: 12.5px;
     width: 40px;
     height: 40px;
-    left: 44.5%;
+    left: 44%;
     border: 1px Solid white;
 }
 .navbar-toggler:focus {
@@ -121,8 +132,9 @@ a.activo-contact{
 header section{
     background:linear-gradient(#5DA9EA,#266AA4);
 }
-.primera h1{
-    font-size: 50px;
+
+h2{
+    font-size: 42px!important;
 }
 header .posnav{
     width: 1000px;
@@ -151,11 +163,31 @@ img.svgdere{
     height: 115px;
     transition: 0.5s;
 }
+
+.svgs.home  {
+    margin-top: -5%;
+}
+.svgs.portfolio,.svgs.roadmap,.svgs.contact,.svgs.proyecto{
+    margin-top: -10%;
+}
+
+.fondo{
+    padding-top: 225px;
+}
+
+
+/*MAIN*******************************/
+section.main{
+    padding-bottom: 10rem;
+}
 .primera{
-    margin-top: -435px;
+    margin-top: -385px;
 }
 .segunda,.tercera{
-    margin-top: -450px;
+    margin-top: -335px;
+}
+.cuarta{
+    margin-top: -335px;
 }
 .titulo{
     margin-bottom: 15rem;
@@ -166,18 +198,9 @@ img.svgdere{
 .titulo .logo{
     width: 16.5%;
 }
-.svgs{
-    margin-top: -5%;
-}
-
-.fondo{
-    padding-top: 225px;
-}
-
-
-/*MAIN*******************************/
-section.main{
-    padding-bottom: 12rem;
+.primera h1{
+    font-size: 50px;
+    margin-top: 15px;
 }
 
 /*1ºPARTE HOME*/
@@ -238,11 +261,11 @@ a.bt-learn:hover{
     border: 1px Solid #6cbbfe;
 }
 /*BOTON LEANR*/
-/*1ºPARTE HOME**************************************************/
+/*1ºPARTE HOME*************************************************/
 
 /*2ºPARTE HOME**************************************************/
 .container2{
-    padding-bottom: 45rem;
+    padding-bottom: 42rem;
 }
 .presentacion{
     background: #1D67A6;
@@ -254,7 +277,7 @@ a.bt-learn:hover{
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 15.5rem;
+    margin-top: 14.5rem;
 }
 .front{
     padding-bottom: 1.89rem;
@@ -263,7 +286,6 @@ a.bt-learn:hover{
 
 }
 .extras{
-    padding-bottom: 9.39rem;
     border-top-right-radius: 1.563rem;
     border-bottom-right-radius: 1.563rem;
 }
@@ -370,6 +392,7 @@ a.filtro{
     border: 1px solid #6cbbfe;
     color: #6cbbfe;
     transition: all 0.5s ease;
+    text-align: -webkit-center;
 }
 .filtro:hover{
     background: #1D67A6;
@@ -377,9 +400,10 @@ a.filtro{
     margin-top: 10px;
 }
 .nombre-filtro{
-    opacity: 0;
     color: white;
     font-size: 16px;
+    display: none;
+    padding-top: 5px;
 }
 .filtros a.ct_item-active{
     background: #1D67A6;
@@ -387,43 +411,6 @@ a.filtro{
 }
 a.filtro1{
     padding: 12px 0;
-}
-
-.filtro3{
-    margin-left: 5px;
-}
-.filtro4{
-    margin-left: 20px;
-}
-.filtro5{
-    margin-left: 26px;
-}
-.filtro7{
-    margin-left: 24px;
-}
-.filtro8{
-    margin-left: 33px;
-}
-.filtro9{
-    margin-left: 27px;
-}
-.filtro10{
-    margin-left: 16px;
-}
-.filtro11{
-    margin-left: 20px;
-}
-.filtros .filtro12{
-    margin-left: 10px;
-}
-.filtros .filtro14{
-    margin-left: 20px;
-}
-.filtros .filtro15{
-    margin-left: 20px;
-}
-.filtros .filtro16{
-    margin-left: 8px;
 }
 /*1ºPARTE PORTFOLIO********************************************/
 
@@ -461,22 +448,11 @@ a.filtro1{
     border-radius: 15px;
 }
 .proyecto1::before,.proyecto2::before,.proyecto3::before,.proyecto4::before{
-    background-size: 100%;
+    background-size: cover;
     content: '';
     background-repeat: no-repeat;
 }
-.proyectos .card .proyecto1::before{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/Anime-War/hover.png);
-}
-.proyectos .card .proyecto2::before{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/Crash-Run/crashover.png);
-}
-.proyectos .card .proyecto3::before{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/santa2.png);
-}
-.proyectos .card .proyecto4::before{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/portfolio/proyectos/santa2.png);
-}
+
 .proyectos .card .contentBx::before{
     content: '';
     position: absolute;
@@ -489,6 +465,9 @@ a.filtro1{
     transform-origin: top;
     transition-delay: 0.25s;
     border-radius: 15px;
+    filter: brightness(0.65);
+    background-image:  var(--hover);
+    background-size: cover;
 }
 /*imagen de fondo del hover*/
 .proyectos .card:hover .contentBx::before{
@@ -560,28 +539,27 @@ a.bt-izq,a.bt-der{
 .bt-der{
     right: 100px;
 }
+.carousel-indicators [data-bs-target]{
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 100%;
+    background-color: #6AB8FB!important;
+}
+.carousel-indicators .active{
+    width: 20px!important;
+    height: 20px!important;
+    background-color: #1D67A6!important;
+}
 /*VER PROYECTO**************************************/
 
 /*ROADMAP**********************************/
-
-#dibujo{
+#roadmap{
     height: 2000px;
 }
-.on .circulo1{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background: red;
-    position: fixed;
-    left: 0px;
-}
-.circulo2{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background: red;
-    margin-top: 1800px;
-}
+
+
+
+
 /*ROADMAP**********************************/
 
 /*CONTACTO************************************/
@@ -603,8 +581,10 @@ input[type="text"],textarea{
     box-sizing: border-box;
 }
 .message{
-    height: 90px;
+    width: 96.5%!important;
     position: relative;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
 }
 .name{
     margin-right: 0.5rem;
@@ -772,7 +752,13 @@ li.portfolio{
 /*RESPONSIVE***************************************/
 @media (max-width: 1768px){
     .primera{
-        margin-top: -420px;
+        margin-top: -365px;
+    }
+    .primera h1{
+        margin-top: 45px;
+    }
+    .segunda{
+        margin-top: -360px;
     }
 }
 @media (max-width: 1400px) {
@@ -783,7 +769,10 @@ li.portfolio{
         margin: 0 0.25rem!important;
     }
     .primera {
-        margin-top: -375px;
+        margin-top: -325px;
+    }
+    .primera h1{
+        margin-top: 0;
     }
     .overlay{
         width: 17.85rem;
@@ -814,6 +803,9 @@ li.portfolio{
     ul.menu{
         margin-top: 5px!important;
         font-size: 1.5rem;
+    }
+    li.portfolio{
+        margin: 0;
     }
     .container2 .tabla{
         margin-top: 17rem;
@@ -852,14 +844,23 @@ li.portfolio{
     .swiper-button-prev{
         left:20px!important;
     }
-    .primera h1{
-        font-size: 40px;
+    h1{
+        font-size: 40px!important;
+    }
+    h2{
+        font-size: 32px!important;
     }
     .primera {
-        margin-top: -350px;
+        margin-top: -275px;
+    }
+    .segunda{
+        margin-top: -310px;
     }
     .fondo{
-        padding-top: 250px;
+        padding-top: 160px;
+    }
+    .titulo{
+        margin-bottom: 12rem;
     }
 
 }
@@ -940,6 +941,12 @@ li.portfolio{
     .swiper-button-prev{
         left: 0px!important;
     }
+    .segunda{
+        margint-top:-285px
+    }
+    h1{
+        font-size: 35px!important;
+    }
 }
 @media (max-width: 770px) {
     footer .prefooter{
@@ -952,7 +959,7 @@ li.portfolio{
     .logo-cabeza{
         width: 20% !important;
         z-index: 1;
-        transform: var(--logo,translateX(0px));
+        transform: var(--logo,translateX(0px) translateY(0px));
         transition: transform 0.5s ease-in-out;
     }
     .pestañas{
@@ -1002,6 +1009,9 @@ li.portfolio{
     }
     .swiper-button-next{
         right: 0px!important;
+    }
+    h1{
+        font-size: 30px!important;
     }
 }
 @media (max-width: 580px)   {
@@ -1079,7 +1089,7 @@ li.portfolio{
     }
     .col-sm-1{
         flex: 0 0 auto;
-        width: 10% !important;
+        width: 15% !important;
     }
     .swiper-button-prev{
         left: -10px!important;
@@ -1102,13 +1112,13 @@ li.portfolio{
         font-size: 2rem!important;
     }
     .primera {
-        margin-top: -325px;
+        margin-top: -310px;
     }
     .fondo{
-        padding-top: 350px;
+        padding-top: 375px;
     }
     .titulo {
-        margin-bottom: 5rem;
+        margin-bottom: 8rem;
     }
     .logo-cabeza{
         margin-top: -40px!important;
@@ -1117,14 +1127,14 @@ li.portfolio{
         font-size: 1rem;
         margin-left: -35px!important;
         margin-top: -35px!important;
-        transform: var(--contacto,translateX(0px));
+        transform: var(--contacto,translateX(0px) translateY(0px));
         transition: transform 0.5s ease-in-out;
     }
     .container2{
-        padding-bottom: 133rem;
+        padding-bottom: 138rem;
     }
     .container2 .tabla{
-        margin-top: 60rem;
+        margin-top: 63rem;
     }
     .overlay {
         width: 16rem!important;
@@ -1174,6 +1184,9 @@ li.portfolio{
         z-index: 0;
         background-position-y: 10px;
     }
+    .menu a:before {
+        content: none;
+    }
     ul.menu a{
         font-size: 16px;
         background-color: white;
@@ -1183,6 +1196,9 @@ li.portfolio{
     .collapse{
         transition: transform 0.25s ease-in-out;
         transform: var(--collapse);
+    }
+    ul.menu a:hover{
+        color: #1D67A6;
     }
     .ir-arriba{
         right:42.5%;
@@ -1200,7 +1216,7 @@ li.portfolio{
         position: fixed;
         width: 100%;
         background-color: #2c70ab;
-        top: 85px;
+        transform: var(--svg,translateY(-265px));
         z-index: 15;
     }
     .navPrincipal{
@@ -1214,8 +1230,17 @@ li.portfolio{
     .titulo .logo {
         width: 45%;
     }
+    section.main {
+        padding-bottom: 10rem;
+    }
 
-
+    .redes{
+        margin-left: -15px;
+        margin-top: 5px;
+    }
+    .redes a svg{
+        height: 28px;
+    }
 
 }
 

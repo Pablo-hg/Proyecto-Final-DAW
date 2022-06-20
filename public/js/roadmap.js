@@ -1,5 +1,5 @@
 
-var dibujo = document.getElementById('dibujo');
+/*var dibujo = document.getElementById('dibujo');
 var circulo2 = document.querySelector(".circulo2");
 var circulo1 = document.querySelector(".circulo1");
 var y = 0;
@@ -34,15 +34,25 @@ $(window).scroll(function(){
 
 
     circulo1.style.left = ejey+"px";
-
-
-
-
 });
 
 function hola(){
     dibujo.classList.toggle("pulsado");
     dibujo.classList.toggle("on");
     dibujo.classList.toggle("off");
-}
+}*/
+//animacion que muestra y esconde el boton
+
+let path = document.querySelector('path');
+let longitud = path.getTotalLength();
+
+path.style.strokeDasharray = longitud + ' ' + longitud;
+
+window.addEventListener('scroll',()=>{
+    var porcentaje = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    var lineaaltura = longitud * porcentaje;
+    path.style.strokeDasharray = longitud - lineaaltura;
+
+})
+
 

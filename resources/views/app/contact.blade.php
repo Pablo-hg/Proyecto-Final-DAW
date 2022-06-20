@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container bg-transparent primera">
+    <div class="container bg-transparent tercera">
         <div class="row align-items-center justify-content-center titulo">
             <div class="fullstack text-center text-white col-sm-6 mt-5 fw-bold">
                 <h2>Get in touch</h2>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row mt-2">
+        <div class="row mt-2 mb-6">
             <!-- FORMLARIO -->
             <div class="col-sm-6">
                 @if (!isset($_SESSION['formulario']))
@@ -38,7 +38,7 @@
                         </div>
                         <!-- ASUNTO -->
                         <div class="row my-4 justify-content-center">
-                            <div class="col-sm-12 subject input-effect">
+                            <div class="col-sm-10 subject input-effect">
                                 <input class="effect-20" type="text" placeholder="" name="subject" required="">
                                 <label>Subject</label>
                                 <span class="focus-border">

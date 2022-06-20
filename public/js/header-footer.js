@@ -1,13 +1,13 @@
 
 //AL CARGAR LA WEB
-$(document).ready(function () {
+window.onload = function() {
     // EFECTO ANIMAR HAMBURGUESA
     $('.bt-menu').on('click', function () {
         $('.animated-icon2').toggleClass('open');
     });
     irArriba();
     transicion();
-});
+};
 
 //EFECTO QUE ANIMA LOS ELEMENTOS DEL MENU
 function menu(){
@@ -18,17 +18,25 @@ function menu(){
     var button = document.getElementById("menu");
     var valor = button.getAttribute("aria-expanded");
     var svg = document.getElementById('svgs');
+    var pestañas = document.getElementById('pestañas');
+
 
     if(valor){
         element.style.setProperty("--before", "translateY(-10px)");
         elemento2.style.setProperty("--collapse", "translateY(55px)");
-        elemento3.style.setProperty("--contacto", "translateX(-30px)");
-        elemento4.style.setProperty("--logo", "translateX(50px)");
+        elemento3.style.setProperty("--contacto", "translateX(-35px) translateY(-40px)");
+        elemento4.style.setProperty("--logo", "translateX(70px) translateY(-40px)");
+
+        svg.style.setProperty("--svg", "translateY(-170px)");
+        pestañas.style.height = "185px";
     }
     if(valor.valueOf()=="false"){
         element.style.setProperty("--before", "translateY(-130px)");
-        elemento3.style.setProperty("--contacto", "translateX(0px)");
-        elemento4.style.setProperty("--logo", "translateX(0px)");
+        elemento3.style.setProperty("--contacto", "translateX(0px) translateY(0px)");
+        elemento4.style.setProperty("--logo", "translateX(0px) translateY(0px)");
+
+        svg.style.setProperty("--svg", "translateY(-265px)");
+        pestañas.style.height = "115px";
     }
 }
 
@@ -89,14 +97,15 @@ function transicion(){
     }
 }
 
-
-
+//Efecto que deja fijo el svg y el nav al deslizar
 window.onscroll = function() {
     var svg = document.getElementById('svgs');
     var header = document.querySelector(".navPrincipal");
     svg.classList.toggle("fijar",window.scrollY>=270);
     header.classList.toggle("fijar",window.scrollY>=270);
 };
+
+
 
 
 
