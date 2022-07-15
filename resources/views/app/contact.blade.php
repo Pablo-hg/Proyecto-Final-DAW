@@ -3,8 +3,8 @@
 @section('content')
     <div class="container bg-transparent tercera">
         <div class="row align-items-center justify-content-center titulo">
-            <div class="fullstack text-center text-white col-sm-6 mt-5 fw-bold">
-                <h2>Get in touch</h2>
+            <div class="fullstack text-center text-white col-sm-6 mt-3 fw-bold">
+                <h2 class="fw-bold">Get in touch</h2>
                 <p class="fs-5">
                     If you wanna get in touch, talk to me about a project collaboration or just say hi,
                     fill up the awesome form below.

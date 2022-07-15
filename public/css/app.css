@@ -36,6 +36,7 @@ a.bt-contact2:hover{
 .redes a svg{
     height: 35px;
 }
+
 /*BOTON CONTACTO*/
 
 /*MENU*/
@@ -168,7 +169,7 @@ img.svgdere{
     margin-top: -5%;
 }
 .svgs.portfolio,.svgs.roadmap,.svgs.contact,.svgs.proyecto{
-    margin-top: -10%;
+    margin-top: -8%;
 }
 
 .fondo{
@@ -184,7 +185,7 @@ section.main{
     margin-top: -385px;
 }
 .segunda,.tercera{
-    margin-top: -335px;
+    margin-top: -320px;
 }
 .cuarta{
     margin-top: -335px;
@@ -534,32 +535,47 @@ a.bt-izq,a.bt-der{
     top: 45%;
 }
 .bt-izq{
-    left: 100px;
+    left: 2.5%;
+}
+.bt-izq span, .bt-der span{
+    position: relative;
+    z-index: -10;
 }
 .bt-der{
-    right: 100px;
+    right: 2.5%;
+}
+.carousel-indicators{
+    align-items: center;
+    margin-bottom: -5rem!important;
 }
 .carousel-indicators [data-bs-target]{
-    width: 10px!important;
-    height: 10px!important;
+    width: 15px!important;
+    height: 15px!important;
     border-radius: 100%;
     background-color: #6AB8FB!important;
 }
 .carousel-indicators .active{
-    width: 20px!important;
-    height: 20px!important;
+    width: 30px!important;
+    height: 30px!important;
     background-color: #1D67A6!important;
 }
+
+.carousel-control-prev:hover{
+    border-radius: 25px 0px 0px 25px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.carousel-control-next:hover{
+    border-radius: 0px 25px 25px 0px;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+
 /*VER PROYECTO**************************************/
 
 /*ROADMAP**********************************/
 #roadmap{
-    height: 2000px;
+    height: 20px;
 }
-
-
-
-
 /*ROADMAP**********************************/
 
 /*CONTACTO************************************/
@@ -756,9 +772,6 @@ li.portfolio{
     }
     .primera h1{
         margin-top: 45px;
-    }
-    .segunda{
-        margin-top: -360px;
     }
 }
 @media (max-width: 1400px) {

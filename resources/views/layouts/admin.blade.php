@@ -39,7 +39,7 @@
             </ul>
         @endif
 </nav>
-<!-- Mensajes  -->re
+<!-- Mensajes  -->
 @include('admin.partials.mensajes')
 <main class="container text-center mt-5 w-100">
     <section class="container-fluid">

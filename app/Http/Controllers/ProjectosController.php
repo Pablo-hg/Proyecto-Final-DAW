@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Projectos;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProyectoRequest;
 
 class ProjectosController extends Controller
 {

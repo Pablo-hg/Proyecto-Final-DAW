@@ -35,7 +35,7 @@
         <!-- CARROUSEL -->
         <div class="row justify-content-center">
             <div class="col-sm-9">
-                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade align-items-center" data-bs-ride="carousel">
                     @php $imagenes = explode(",",substr($row->imagenes,0,-1)); @endphp
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
@@ -55,19 +55,19 @@
                     </div>
                     <button class="carousel-control-prev pasar" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <svg width="27" height="40" viewBox="0 0 27 40" fill="" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.6575 20.0129L25.4547 7.5273C26.105 6.89356 26.4293 6.11845 26.4293 5.20207C26.4293 4.28577 26.1049 3.51103 25.4547 2.87737L23.4801 0.950305C22.8309 0.316828 22.0363 0 21.0974 0C20.1585 0 19.3643 0.316828 18.714 0.950305L1.54532 17.6748C0.895642 18.3086 0.570801 19.0836 0.570801 20C0.570801 20.9165 0.89555 21.6909 1.54532 22.3249L18.714 39.0494C19.3642 39.6832 20.1583 40 21.0973 40C22.0363 40 22.8308 39.6832 23.48 39.0494L25.4546 37.1227C26.1049 36.4893 26.4293 35.7186 26.4293 34.8104C26.4293 33.903 26.1048 33.1236 25.4546 32.4729L12.6575 20.0129Z" fill="#7eacd3" fill-opacity="1"/>
+                            <path d="M12.6575 20.0129L25.4547 7.5273C26.105 6.89356 26.4293 6.11845 26.4293 5.20207C26.4293 4.28577 26.1049 3.51103 25.4547 2.87737L23.4801 0.950305C22.8309 0.316828 22.0363 0 21.0974 0C20.1585 0 19.3643 0.316828 18.714 0.950305L1.54532 17.6748C0.895642 18.3086 0.570801 19.0836 0.570801 20C0.570801 20.9165 0.89555 21.6909 1.54532 22.3249L18.714 39.0494C19.3642 39.6832 20.1583 40 21.0973 40C22.0363 40 22.8308 39.6832 23.48 39.0494L25.4546 37.1227C26.1049 36.4893 26.4293 35.7186 26.4293 34.8104C26.4293 33.903 26.1048 33.1236 25.4546 32.4729L12.6575 20.0129Z" fill="white" fill-opacity="1"/>
                         </svg>
                     </button>
                     <button class="carousel-control-next pasar" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                         <svg width="27" height="40" viewBox="0 0 27 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.3425 20.0129L1.54527 7.5273C0.895035 6.89356 0.570658 6.11845 0.570658 5.20207C0.570658 4.28577 0.895128 3.51103 1.54527 2.87737L3.51987 0.950305C4.16909 0.316828 4.96367 0 5.90259 0C6.84151 0 7.63572 0.316828 8.28596 0.950305L25.4547 17.6748C26.1044 18.3086 26.4292 19.0836 26.4292 20C26.4292 20.9165 26.1045 21.6909 25.4547 22.3249L8.28605 39.0494C7.63581 39.6832 6.8417 40 5.90268 40C4.96367 40 4.16918 39.6832 3.51996 39.0494L1.54536 37.1227C0.895128 36.4893 0.570747 35.7186 0.570747 34.8104C0.570747 33.903 0.89522 33.1236 1.54536 32.4729L14.3425 20.0129Z" fill="#7eacd3" fill-opacity="1"/>
+                            <path d="M14.3425 20.0129L1.54527 7.5273C0.895035 6.89356 0.570658 6.11845 0.570658 5.20207C0.570658 4.28577 0.895128 3.51103 1.54527 2.87737L3.51987 0.950305C4.16909 0.316828 4.96367 0 5.90259 0C6.84151 0 7.63572 0.316828 8.28596 0.950305L25.4547 17.6748C26.1044 18.3086 26.4292 19.0836 26.4292 20C26.4292 20.9165 26.1045 21.6909 25.4547 22.3249L8.28605 39.0494C7.63581 39.6832 6.8417 40 5.90268 40C4.96367 40 4.16918 39.6832 3.51996 39.0494L1.54536 37.1227C0.895128 36.4893 0.570747 35.7186 0.570747 34.8104C0.570747 33.903 0.89522 33.1236 1.54536 32.4729L14.3425 20.0129Z" fill="white" fill-opacity="1"/>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
         <!-- BT VISIT WEB -->
-        <div class="row justify-content-center my-5">
+        <div class="row justify-content-end my-5 me-5">
             <div class="col-sm-4">
                 <a href="#" class="text-uppercase text-decoration-none text-white fw-bold bt-web">
                     visit the website
@@ -135,7 +135,7 @@
                     <li type="circle" class="my-2">
                        @php
                            if(str_contains($row->enlace1, ".be")){$texto="Puedes ver un video del funcionamiento del proyecto en";$sitio="Youtube";}
-                           if(str_contains($row->enlace1, "35.")){$texto="Puedes visitar la web del proyecto";$sitio="aqui";}
+                           if(str_contains($row->enlace1, "35.")){$texto="Puedes visitar la web del proyecto en mi ";$sitio="Servidor";}
                            if(str_contains($row->enlace1, ".com")){$texto="Puedes visitar la web oficial del proyecto";$sitio=$row->enlace1;}
                         @endphp
                         {{$texto}}
@@ -147,8 +147,8 @@
                     <li type="circle" class="my-2">
                         @php
                                 if($row->enlace2==""){$texto="La descarga del proyecto estará disponible";$sitio="Próximamente";}
-                                if(str_contains($row->enlace2, "github")){$texto="La descarga del proyecto está disponible en";$sitio="Github";}
-                                if(str_contains($row->enlace2,"35.")!== false){$texto="Puedes probar el proyecto ";$sitio="aqui";}
+                                if(str_contains($row->enlace2, "github")){$texto="Puedes ver el repositorio con el contenido del proyecto en";$sitio="Github";}
+                                if(str_contains($row->enlace2,"35.")!== false){$texto="Puedes probar el proyecto en mi ";$sitio="Servidor";}
                          @endphp
                         {{$texto}}
                         <a target="_blank" title="{{$row->enlace2}}" href="{{$row->enlace2}}" class="text-decoration-none">
@@ -170,8 +170,8 @@
         </div>
         <!--BOTONES DE PASAR PROYECTO-->
         <div class="botones">
-            <a href="@php echo $izq @endphp" class="bt-izq cambio">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="@php echo $izq @endphp" class="bt-izq cambio text-decoration-none" onmouseenter="verAnterior(this)" onmouseleave="cancelarHoverizq(this,1)">
+                <svg width="75" height="75" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_822_107)">
                         <path d="M19.1779 20.0129L31.663 7.5273C32.2974 6.89356 32.6138 6.11845 32.6138 5.20207C32.6138 4.28577 32.2973 3.51103 31.663 2.87737L29.7366 0.950305C29.1032 0.316828 28.328 0 27.4119 0C26.4959 0 25.7211 0.316828 25.0867 0.950305L8.33674 17.6748C7.7029 18.3086 7.38599 19.0836 7.38599 20C7.38599 20.9165 7.70281 21.6909 8.33674 22.3249L25.0866 39.0494C25.721 39.6832 26.4957 40 27.4119 40C28.328 40 29.1031 39.6832 29.7365 39.0494L31.6629 37.1227C32.2973 36.4893 32.6137 35.7186 32.6137 34.8104C32.6137 33.903 32.2972 33.1236 31.6629 32.4729L19.1779 20.0129Z" fill="#7EACD3"/>
                     </g>
@@ -181,9 +181,11 @@
                         </clipPath>
                     </defs>
                 </svg>
+                <span id="anterior" class="text-decoration-none"></span>
             </a>
-            <a href="@php echo $der @endphp" class="bt-der cambio">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="@php echo $der @endphp" class="bt-der cambio text-decoration-none" onmouseenter="verSiguiente(this)" onmouseleave="cancelarHoverdere(this,3)">
+                <span id="siguiente"></span>
+                <svg width="75" height="75" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_822_105)">
                         <path d="M20.8221 19.9871L8.33701 32.4727C7.70264 33.1064 7.38617 33.8816 7.38617 34.7979C7.38617 35.7142 7.70273 36.489 8.33701 37.1226L10.2634 39.0497C10.8968 39.6832 11.672 40 12.5881 40C13.5041 40 14.2789 39.6832 14.9133 39.0497L31.6633 22.3252C32.2971 21.6914 32.614 20.9164 32.614 20C32.614 19.0835 32.2972 18.3091 31.6633 17.6751L14.9134 0.950581C14.279 0.316833 13.5043 3.8147e-06 12.5881 3.8147e-06C11.672 3.8147e-06 10.8969 0.316833 10.2635 0.950581L8.3371 2.87729C7.70273 3.51067 7.38626 4.28137 7.38626 5.18956C7.38626 6.09704 7.70282 6.87637 8.3371 7.52713L20.8221 19.9871Z" fill="#7EACD3"/>
                     </g>
@@ -193,10 +195,11 @@
                         </clipPath>
                     </defs>
                 </svg>
+
             </a>
         </div>
     </div>
     @endforeach
-
+    <script src="{{ asset('js/proyecto.js') }}"></script>
 
 @endsection

@@ -105,6 +105,16 @@ window.onscroll = function() {
     header.classList.toggle("fijar",window.scrollY>=270);
 };
 
+//EFECTO HOVER DE LAS REDES
+function hoverRedes(red){
+    var svg = red;
+    svg.style.fill = "#1D67A6";
+}
+function salirRedes(red){
+    var svg = red;
+    svg.style.fill = "white";
+}
+
 
 
 

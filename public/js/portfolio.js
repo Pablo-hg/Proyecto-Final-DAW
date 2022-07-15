@@ -8,7 +8,6 @@ function hoverfiltro(x) {
 function salirhoversalir(x){
     x.childNodes[1].style.display = "none";
     x.childNodes[3].style.display = "block";
-
 }
 
 // EFECTO OPACIDAD FILTROS PORTFOLIO
@@ -63,7 +62,7 @@ $(document).ready(function(){
 //EFECTO FILTRADOR
 
 
-//Efecto que carga las imagnes "hove" de los proyectos
+//Efecto que carga las imagnes "hover" de los proyectos
 function cargarHover(){
     var numeros = document.getElementById("numeros").innerHTML;
     for(let k = 1; k <= numeros;k++){
@@ -71,4 +70,6 @@ function cargarHover(){
         document.getElementById("contentBx"+k).style.setProperty('--hover','url("'+direccion);
     }
 }
+
+
 

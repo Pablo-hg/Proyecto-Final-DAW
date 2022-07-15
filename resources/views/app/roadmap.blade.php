@@ -5,7 +5,7 @@
     <div class="container bg-transparent segunda">
         <div class="row align-items-center justify-content-center titulo">
             <div class="text-center mt-5 col-sm-9">
-                <h2 class="fw-bold text-white">roadmap</h2>
+                <h2 class="fw-bold text-white">My roadmap</h2>
             </div>
         </div>
     </div>

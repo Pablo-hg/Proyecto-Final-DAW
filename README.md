@@ -32,5 +32,6 @@ ROADMAP
     -Entro a OKdiario
     -Desarrollo pablohg.com
 
-titulo, texto, imagen, fecha, activo
+OTRAS COSAS
+    -Archivo .env -> APP_ENV=production, APP_DEBUG=false
 
