@@ -1,5 +1,5 @@
 COSAS QUE TERMINAR
-    -ajustar los tamaños de los margenes ,paddings en las páginas
+->ajustar los tamaños de los margenes ,paddings en las páginas
     -terminar el roadmap
     -modificar css cambiador de proyectos
     -revisar más proyectos y prácticas del servidor
