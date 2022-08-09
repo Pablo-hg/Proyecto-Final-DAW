@@ -1,17 +1,12 @@
 COSAS QUE TERMINAR
-
--> ajustar los tamaños de los margenes ,paddings en las páginas
--> terminar el roadmap
--> modificar css cambiador de proyectos
--> revisar más proyectos y práctocas del servudor
+    -ajustar los tamaños de los margenes ,paddings en las páginas
+    -terminar el roadmap
+    -modificar css cambiador de proyectos
+    -revisar más proyectos y prácticas del servidor
 
 
 
 PROYECTOS QUE FALTAN POR AÑADIR EN PORTFOLIO
-
-
-
-
     -Revisar proyctos js y diseño de JC
 
 
@@ -32,4 +27,5 @@ ROADMAP
 
 OTRAS COSAS
     -Archivo .env -> APP_ENV=production, APP_DEBUG=false
+    -Los archivos que faltan son : storage,tests y vendor
 
