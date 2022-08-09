@@ -51,9 +51,12 @@
                     <div class="col-md-2 logo-cabeza">
                         <div class="logo">
                             <a href="{{ route('home') }}" class="navbar-brand cambio">
-                                {{ Html::image('img/mordecai.jpeg', 'Logo Pablohg',['class'=>'imagenlogo']) }}
+                                {{ Html::image('img/logo.png', 'Logo Pablohg',['class'=>'imagenlogo mt-4']) }}
                             </a>
                         </div>
+                        <a href="{{ route('home') }}">
+                            <span class="nombre text-light">pablohg.com</span>
+                        </a>
                     </div>
                     <!--BOTON RESPONSIVE-->
                     <button onclick="menu()" id="menu" class="navbar-toggler bt-menu position-absolute rounded-circle btn"

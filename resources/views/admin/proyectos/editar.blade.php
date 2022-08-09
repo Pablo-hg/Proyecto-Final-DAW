@@ -54,7 +54,7 @@
                 <!-- TEXTO3 -->
                 <div class="row justify-content-center mb-3">
                     <div class="col-sm-12">
-                        <label for="texto3">Texto1</label>
+                        <label for="texto3">Texto3</label>
                         <textarea id="texto3" class="form-control" name="texto3">{{ $row->texto3 }}</textarea>
                     </div>
                 </div>

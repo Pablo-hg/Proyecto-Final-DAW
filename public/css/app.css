@@ -7,7 +7,12 @@ body,main,nav{
 }
 /*LOGO*/
 .logo a img {
-    width: 2.18rem;
+    width: 9rem;
+}
+span.nombre{
+    position: absolute;
+    margin-left: -75px;
+    font-size: 24px;
 }
 /*BOTON CONTACTO*/
 a.bt-contact,a.bt-contact2{
@@ -157,7 +162,7 @@ img.svgdere{
     margin-top: -12px;
 }
 .pestañas{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/header/svgnav.svg);
+    background-image: url(http://13.38.228.152/proyecto-final-daw/public/img/header/svgnav.svg);
     background-size: 100%;
     padding-bottom: 30px;
     background-repeat: no-repeat;
@@ -234,16 +239,16 @@ section.main{
     background-size: contain;
 }
 .swiper-button-prev{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/left.png);
+    background-image: url(http://13.38.228.152/proyecto-final-daw/public/img/home/carousel/left.png);
 }
 .swiper-button-next{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/right.png);
+    background-image: url(http://13.38.228.152/proyecto-final-daw/public/img/home/carousel//right.png);
 }
 .swiper-button-prev:hover{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/left-hover.png);
+    background-image: url(http://13.38.228.152/proyecto-final-daw/public/img/home/carousel/left-hover.png);
 }
 .swiper-button-next:hover{
-    background-image: url(http://35.181.8.108/proyecto-final-daw/public/img/home/carousel/right-hover.png);
+    background-image: url(http://13.38.228.152/proyecto-final-daw/public/img/home/carousel/right-hover.png);
 }
 /*CARROUSEL*/
 
@@ -402,9 +407,10 @@ a.filtro{
 }
 .nombre-filtro{
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     display: none;
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 .filtros a.ct_item-active{
     background: #1D67A6;
@@ -447,6 +453,8 @@ a.filtro1{
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    border: 1px solid #0163ff;
+
 }
 .proyecto1::before,.proyecto2::before,.proyecto3::before,.proyecto4::before{
     background-size: cover;
@@ -546,7 +554,7 @@ a.bt-izq,a.bt-der{
 }
 .carousel-indicators{
     align-items: center;
-    margin-bottom: -5rem!important;
+    margin: 0 20% -5rem 20%!important;
 }
 .carousel-indicators [data-bs-target]{
     width: 15px!important;
@@ -568,14 +576,20 @@ a.bt-izq,a.bt-der{
     border-radius: 0px 25px 25px 0px;
     background: linear-gradient(-90deg, rgba(0, 0, 0, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
 }
-
+.bt-visitweb{
+    margin-right: 7rem!important;
+}
 
 /*VER PROYECTO**************************************/
 
 /*ROADMAP**********************************/
 #roadmap{
-    height: 20px;
+    height: 200rem;
 }
+
+
+
+
 /*ROADMAP**********************************/
 
 /*CONTACTO************************************/
@@ -595,6 +609,7 @@ a.bt-izq,a.bt-der{
 input[type="text"],textarea{
     width: 100%;
     box-sizing: border-box;
+    height: 100%;
 }
 .message{
     width: 96.5%!important;
@@ -629,7 +644,7 @@ input[type="text"],textarea{
 .effect-20:focus ~ .focus-border i:after,
 .has-content.effect-20 ~ .focus-border i:before,
 .has-content.effect-20 ~ .focus-border i:after{height: 100%; transition: 0.4s;}
-.effect-20 ~ label{position: absolute; left: 14px; top: 10px; color: #aaa; transition: 0.3s; z-index: 0; letter-spacing: 0.5px;}
+.effect-20 ~ label{position: absolute; left: 14px; top: 7px; color: #aaa; transition: 0.3s; z-index: 0; letter-spacing: 0.5px;}
 .effect-20:focus ~ label, .has-content.effect-20 ~ label{top: -18px; left: 0; font-size: 12px; color: #3399FF; transition: 0.3s;}
 /*EFECTO INPUTS*/
 /*CONTACTO************************************/
@@ -766,15 +781,18 @@ li.portfolio{
 
 
 /*RESPONSIVE***************************************/
-@media (max-width: 1768px){
+@media (max-width: 1600px){
     .primera{
         margin-top: -365px;
     }
     .primera h1{
         margin-top: 45px;
     }
+    .segunda{
+        margin-top: -300px!important;
+    }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
     ul.menu{
         margin-top: 10px!important;
     }
@@ -786,6 +804,9 @@ li.portfolio{
     }
     .primera h1{
         margin-top: 0;
+    }
+    .segunda{
+        margin-top: -290px!important;
     }
     .overlay{
         width: 17.85rem;
@@ -975,6 +996,7 @@ li.portfolio{
         transform: var(--logo,translateX(0px) translateY(0px));
         transition: transform 0.5s ease-in-out;
     }
+
     .pestañas{
         background-image: none;
         width: 60% !important;

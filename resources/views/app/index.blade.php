@@ -13,6 +13,13 @@
             </div>
         </div>
     </div>
+
+        <span>
+            @php
+
+            @endphp
+        </span>
+
     <!--2ºPARTE-->
     <div class="container">
         <!--CARUSEL-->
@@ -141,7 +148,7 @@
                     <h2 class="fs-2">Back-end</h2>
                     <p class="fs-5 mx-4 py-3">I think that everything related to the cloud and servers is the most important thing when working for the user.</p>
                     <h3 class="fs-3 txtazul">Languages</h3>
-                    <p class="fs-5 mx-4 pt-2 pb-4">PHP, JAVASCRIPT, C#L</p>
+                    <p class="fs-5 mx-4 pt-2 pb-4">PHP, JAVASCRIPT, C#</p>
                     <h3 class="fs-3 txtazul pb-2">Dev Tools</h3>
                     <ul class="fs-5 pb-4 pt-2 tools" type="none">
                         <li>PhpStorm</li>
@@ -170,7 +177,7 @@
                     <h2 class="fs-2">Extras</h2>
                     <p class="fs-5 mx-4 py-3">I like to code things from scratch and enjoy bringing ideas to life in the browser and on any device.</p>
                     <h3 class="fs-3 txtazul">Things I Enjoy doing</h3>
-                    <p class="fs-5 mx-4 pt-2 pb-4">PHP, JAVASCRIPT, C#L</p>
+                    <p class="fs-5 mx-4 pt-2 pb-4">PHP, JAVASCRIPT, C#</p>
                     <h3 class="fs-3 txtazul pb-2">Dev Tools</h3>
                     <ul class="fs-5 pb-4 pt-2 tools" type="none">
                         <li>Figma</li>
@@ -235,13 +242,19 @@
         </div>
         <div class="row justify-content-center align-items-center empresas">
             <div class="col-md-4 mt-4 logoempresa-1">
-                {{ Html::image('img/home/logoeuropapress.png','Logo Empresa')}}
+                <a href="https://www.europapress.es/" target="_blank">
+                    {{ Html::image('img/home/logoeuropapress.png','Logo Empresa')}}
+                </a>
             </div>
             <div class="col-md-3 logoempresa-2">
-                {{ Html::image('img/home/logoalten.png','Logo Empresa')}}
+                <a href="https://www.alten.es/" target="_blank">
+                    {{ Html::image('img/home/logoalten.png','Logo Empresa')}}
+                </a>
             </div>
             <div class="col-md-4 logoempresa-3">
-                {{ Html::image('img/home/logookdiario.png','Logo Empresa')}}
+                <a href="https://www.okdiario.com/" target="_blank">
+                    {{ Html::image('img/home/logookdiario.png','Logo Empresa')}}
+                </a>
             </div>
         </div>
     </div>

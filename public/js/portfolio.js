@@ -20,9 +20,8 @@ $(document).ready(function(){
 
     // FILTRANDO PRODUCTOS
     $('.filtro').click(function(){
-        console.log("hola");
         var catProduct = $(this).attr('category');
-
+        if(catProduct=="C")catProduct="C#";
         // AGREGANDO CLASE ACTIVE AL ENLACE SELECCIONADO
         $('.filtro').removeClass('ct_item-active');
         $(this).addClass('ct_item-active');
@@ -38,12 +37,14 @@ $(document).ready(function(){
             let proyecto = document.querySelectorAll('.proyecto');
             let num = 0;
             for(let k of proyecto){
-                if(k.getAttribute("category").includes(catProduct)){
-                    k.setAttribute('style','transform=0;scale=1');
-                    num++;
+                let hola = k.getAttribute("category").split(',');
+                for(let p of hola){
+                    if(p==catProduct){
+                        k.setAttribute('style','transform=0;scale=1');
+                        num++;
+                    }
                 }
             }
-            if(catProduct=="C")catProduct="C#";
             document.getElementById("showing").innerHTML = "Mostrando " + num.toString().bold() + " projectos filtrados por " + catProduct.bold().toUpperCase() + ".";
         } setTimeout(showProduct,400);
     });

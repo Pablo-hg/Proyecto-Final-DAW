@@ -12,7 +12,7 @@
         <div class="row align-items-center justify-content-center titulo">
             <div class="fullstack text-white fw-bold text-center mt-3 col-sm-9">
                 <h2 class="fw-bold">FullStack developer portfolio</h2>
-                <p class="fs-5 mt-4">Desde Páginas webs hasta videojuegos, diseños y animaciones. Echa un vistazo a mi proyectos de mi portfolio full stack.
+                <p class="fs-5 mt-2">Desde Páginas webs hasta videojuegos, diseños y animaciones. Echa un vistazo a mi proyectos de mi portfolio full stack.
                 </p>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 @for($i=0;$i<sizeof($nombrefiltros);$i++)
                     <a href="#listado" onmouseenter="hoverfiltro(this)" onmouseleave="salirhoversalir(this)" class="py-2 text-uppercase filtro my-3 mx-2 col-sm-1 text-decoration-none" title="filter by {{$filtrarpor[$i]}}" category="{{$nombrefiltros[$i]}}">
                         <div class="nombre-filtro @php echo "filtro".($i+2) @endphp ">{{$filtrarpor[$i]}}</div>
-                        <img src="http://35.181.8.108/proyecto-final-daw/public/img/portfolio/filtros/{{$nombrefiltros[$i]}}.svg">
+                        <img src="http://13.38.228.152/proyecto-final-daw/public/img/portfolio/filtros/{{$nombrefiltros[$i]}}.svg">
                     </a>
                 @endfor
             </div>
@@ -58,7 +58,7 @@
                             <div class="content2">
                                 <div class="container">
                                     <div class="row">
-                                        <span class="tecnicas mb-2">more...</span>
+                                        <span class="tecnicas">more...</span>
                                     </div>
                                 </div>
                             </div>

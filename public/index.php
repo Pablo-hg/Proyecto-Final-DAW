@@ -16,6 +16,8 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
+
+
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
     require $maintenance;
 }
@@ -37,6 +39,7 @@ session_start();
 
 $_SESSION['public'] = 'http://35.181.8.108/proyecto-final-daw/public/';
 $_SESSION['home'] = $_SESSION['public'].'index.php/';
+
 
 /*
 |--------------------------------------------------------------------------

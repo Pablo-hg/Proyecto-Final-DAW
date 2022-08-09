@@ -2,19 +2,17 @@ COSAS QUE TERMINAR
 
 -> ajustar los tamaños de los margenes ,paddings en las páginas
 -> terminar el roadmap
--> subirlo al host
--> configuar dominio y todas las rutas
--> mirar codepen
+-> modificar css cambiador de proyectos
+-> revisar más proyectos y práctocas del servudor
 
 
 
 PROYECTOS QUE FALTAN POR AÑADIR EN PORTFOLIO
-    -Proyecto web after effects (boostrap)
-    -Corto after effects
-    -Pang Pong
-    -Práctica API gitgub
+
+
+
+
     -Revisar proyctos js y diseño de JC
-    -Web con figma(comparador de precios)
 
 
 ROADMAP

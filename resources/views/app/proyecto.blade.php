@@ -34,7 +34,7 @@
         </div>
         <!-- CARROUSEL -->
         <div class="row justify-content-center">
-            <div class="col-sm-9">
+            <div class="col-sm-8">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade align-items-center" data-bs-ride="carousel">
                     @php $imagenes = explode(",",substr($row->imagenes,0,-1)); @endphp
                     <div class="carousel-indicators">
@@ -67,10 +67,10 @@
             </div>
         </div>
         <!-- BT VISIT WEB -->
-        <div class="row justify-content-end my-5 me-5">
+        <div class="row justify-content-end my-5 bt-visitweb">
             <div class="col-sm-4">
-                <a href="#" class="text-uppercase text-decoration-none text-white fw-bold bt-web">
-                    visit the website
+                <a href="{{$row->enlace1}}" class="text-uppercase text-decoration-none text-white fw-bold bt-web">
+                    Ver proyecto
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="mb-2 ms-1">
                         <g clip-path="url(#clip0_283_161)">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5723 4.31865C11.5723 4.15942 11.507 4.00671 11.3906 3.89411C11.2743 3.78152 11.1165 3.71826 10.952 3.71826H2.71932C2.22577 3.71826 1.75244 3.90803 1.40345 4.24581C1.05446 4.58359 0.858398 5.04173 0.858398 5.51943L0.858398 17.5272C0.858398 18.0049 1.05446 18.463 1.40345 18.8008C1.75244 19.1386 2.22577 19.3284 2.71932 19.3284H15.1254C15.619 19.3284 16.0923 19.1386 16.4413 18.8008C16.7903 18.463 16.9863 18.0049 16.9863 17.5272V9.55884C16.9863 9.3996 16.921 9.24689 16.8047 9.1343C16.6883 9.0217 16.5306 8.95845 16.366 8.95845C16.2015 8.95845 16.0437 9.0217 15.9274 9.1343C15.8111 9.24689 15.7457 9.3996 15.7457 9.55884V17.5272C15.7457 17.6864 15.6804 17.8391 15.5641 17.9517C15.4477 18.0643 15.2899 18.1276 15.1254 18.1276H2.71932C2.5548 18.1276 2.39702 18.0643 2.28069 17.9517C2.16436 17.8391 2.09901 17.6864 2.09901 17.5272V5.51943C2.09901 5.36019 2.16436 5.20748 2.28069 5.09489C2.39702 4.98229 2.5548 4.91904 2.71932 4.91904H10.952C11.1165 4.91904 11.2743 4.85578 11.3906 4.74319C11.507 4.63059 11.5723 4.47788 11.5723 4.31865Z" fill="white"/>
@@ -134,21 +134,32 @@
                 <ul class="tecnicas mt-3">
                     <li type="circle" class="my-2">
                        @php
-                           if(str_contains($row->enlace1, ".be")){$texto="Puedes ver un video del funcionamiento del proyecto en";$sitio="Youtube";}
-                           if(str_contains($row->enlace1, "35.")){$texto="Puedes visitar la web del proyecto en mi ";$sitio="Servidor";}
-                           if(str_contains($row->enlace1, ".com")){$texto="Puedes visitar la web oficial del proyecto";$sitio=$row->enlace1;}
-                        @endphp
+                       switch ($row->enlace1){
+                            case str_contains($row->enlace1,'35'):
+                                $texto="Puedes visitar el proyecto en mi ";$sitio="Servidor";
+                                break;
+                            case str_contains($row->enlace1, "/you"):
+                                $texto="Puedes ver un video del funcionamiento del proyecto en ";$sitio="Youtube";
+                                break;
+                            case str_contains($row->enlace1, "/github"):
+                                $texto="Puedes ver el repositorio del proyecto en mi ";$sitio="Github";
+                                break;
+                            default :
+                                $texto="Puedes visitar la web oficial del proyecto en ";$sitio=$row->enlace1;
+                                break;
+                        }
+                       @endphp
                         {{$texto}}
-                        <a target="_blank" title="{{$row->enlace1}}" href="{{$row->enlace1}}" class="text-decoration-none">
+                        <a title="{{$row->enlace1}}" href="{{$row->enlace1}}" class="text-decoration-none">
                             <strong>{{$sitio}}</strong>.
                         </a>
                     </li>
                     @if (!$row->enlace2=="")
                     <li type="circle" class="my-2">
                         @php
-                                if($row->enlace2==""){$texto="La descarga del proyecto estará disponible";$sitio="Próximamente";}
-                                if(str_contains($row->enlace2, "github")){$texto="Puedes ver el repositorio con el contenido del proyecto en";$sitio="Github";}
-                                if(str_contains($row->enlace2,"35.")!== false){$texto="Puedes probar el proyecto en mi ";$sitio="Servidor";}
+                            if(str_contains($row->enlace2, "/youtu")){$texto="Puedes ver un video del funcionamiento del proyecto en ";$sitio="Youtube";}
+                            if(str_contains($row->enlace2, "/35.181.")){$texto="Puedes visitar el proyecto en mi ";$sitio="Servidor";}
+                            if(str_contains($row->enlace2, "/github")){$texto="Puedes ver el repositorio del proyecto en mi ";$sitio="Github";}
                          @endphp
                         {{$texto}}
                         <a target="_blank" title="{{$row->enlace2}}" href="{{$row->enlace2}}" class="text-decoration-none">
