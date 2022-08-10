@@ -27,5 +27,5 @@ ROADMAP
 
 OTRAS COSAS
     -Archivo .env -> APP_ENV=production, APP_DEBUG=false
-    -Los archivos que faltan son : storage,tests y vendor
+    -Los archivos que faltan son : storage,tests y vendor .env
 
