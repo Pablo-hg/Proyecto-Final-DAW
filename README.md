@@ -6,10 +6,6 @@ COSAS QUE TERMINAR
 
 
 
-PROYECTOS QUE FALTAN POR AÑADIR EN PORTFOLIO
-    -Revisar proyctos js y diseño de JC
-
-
 ROADMAP
     -Dejo Bach y entro a grado medio smr
     -2º SMR
@@ -26,6 +22,5 @@ ROADMAP
     -Desarrollo pablohg.com
 
 OTRAS COSAS
-    -Archivo .env -> APP_ENV=production, APP_DEBUG=false
     -Los archivos que faltan son : storage,tests y vendor .env
 
