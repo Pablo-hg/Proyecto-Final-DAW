@@ -7,14 +7,14 @@ COSAS QUE TERMINAR
 
 
 ROADMAP
-    -Dejo Bach y entro a grado medio smr
+    -Entro a grado medio smr
     -2º SMR
     -Prácticas Europapress
     -1ºDAM (descubro programacion como tal)
     -2ºDAM (progreso muchisimo)
     -Hago varios proyectos
-    -Desarrolo Anime war
     -Prácticas alten
+    -Desarrolo Anime war
     -2ºWEB (programacion web)
     -Santaminers
     -Diferentes Webs y proyectos
